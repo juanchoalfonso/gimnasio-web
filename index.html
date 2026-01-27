@@ -1,142 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATLETIC - Entrenar con propósito</title>
-    
-    <link href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697326e2defe187e0f027596/df6983266_459809829_1905421410279872_5845964124196582059_n.jpg" rel="icon">
-
-    <link rel="stylesheet" href="assets/index-CZSZ_8CV.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <title>ATLETIC - Gimnasio</title>
     <style>
-        html { scroll-behavior: smooth; }
-        .bg-gradient-hero { background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 50%, #0A0A0A 100%); }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background: #fff; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; text-align: center; }
+        h1, h2, h3 { color: #000; }
+        a { text-decoration: none; }
+        .btn { background: #d4af37; color: #000; padding: 15px 30px; margin: 10px; border-radius: 5px; font-weight: bold; display: inline-block; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+        .card { background: #f8f8f8; padding: 30px; border-radius: 10px; }
+
+        /* Hero */
+        .hero { background: url('assets/hero-bg.jpg') center/cover no-repeat; color: white; padding: 200px 20px; text-align: center; }
+        .hero h2 { font-size: 24px; text-transform: uppercase; }
+        .hero h1 { font-size: 80px; margin: 0; }
+        .hero h3 { font-size: 40px; color: #d4af37; margin: 20px 0; }
+        .hero p { font-size: 20px; max-width: 800px; margin: auto; }
+
+        /* Navbar simple (como el original) */
+        .navbar { background: rgba(0,0,0,0.8); padding: 15px; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .navbar .container { display: flex; justify-content: center; gap: 30px; }
+        .navbar a { color: white; font-size: 18px; }
+
+        /* Shop */
+        .shop { background: #f8f8f8; padding: 80px 20px; }
+        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .producto { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .btn-agregar { background: #d4af37; color: #000; padding: 10px 20px; margin-top: 10px; border-radius: 5px; display: block; }
+
+        /* Mapa */
+        iframe { width: 100%; height: 400px; border: 0; border-radius: 10px; margin: 20px 0; }
+
+        @media (max-width: 768px) { .hero { padding: 150px 20px; } .hero h1 { font-size: 50px; } }
     </style>
 </head>
-<body class="bg-[#0A0A0A] text-white">
+<body>
 
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md py-4">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="#" class="text-2xl font-bold text-white tracking-tight">ATLETIC</a>
-            <div class="hidden md:flex items-center gap-6">
-                <a href="#" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Inicio</a>
-                <a href="#historia" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Historia</a>
-                <a href="#equipo" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Equipo</a>
-                <a href="#actividades" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Actividades</a>
-                <a href="#shop" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-bold text-[#D4AF37]">Shop</a>
-                <a href="https://wa.me/5491123947976" target="_blank" class="px-5 py-2.5 border border-[#D4AF37] text-[#D4AF37] font-semibold text-sm hover:bg-[#D4AF37] hover:text-black transition-all">RESERVAR</a>
-                <a href="https://wa.me/5491123947976" target="_blank" class="px-5 py-2.5 bg-[#D4AF37] text-black font-semibold text-sm hover:bg-[#E5C04B] transition-colors">CONTACTO</a>
-            </div>
+    <!-- Navbar simple -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#inicio">Gimnasio</a>
+            <a href="#actividades">Conocer actividades</a>
+            <a href="#historia">Nuestra historia</a>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69739cfa8df0181eb713af78/de14bcca8_WhatsAppImage2026-01-23at210055.jpeg');">
-            <div class="absolute inset-0 bg-gradient-hero"></div>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <h2>Gimnasio</h2>
+        <h1>ATLETIC</h1>
+        <h3>ENTRENAR CON PROPÓSITO</h3>
+        <p>En Atletic creemos que entrenar va mucho más allá del ejercicio. Es constancia, compromiso y acompañamiento.</p>
+        <div>
+            <a href="#actividades" class="btn">CONOCER ACTIVIDADES</a>
+            <a href="#historia" class="btn">NUESTRA HISTORIA</a>
         </div>
-        <div class="relative z-10 text-center px-6" data-aos="fade-up">
-            <span class="text-[#D2C18D] text-sm tracking-[0.3em] uppercase mb-4 block">Gimnasio</span>
-            <h1 class="text-6xl md:text-8xl font-bold mb-6">ATLETIC</h1>
-            <p class="text-xl md:text-2xl text-[#D2C18D] font-light mb-8">ENTRENAR CON PROPÓSITO</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#actividades" class="px-10 py-4 bg-[#D2C18D] text-black font-bold hover:scale-105 transition-transform">ACTIVIDADES</a>
-                <a href="#historia" class="px-10 py-4 border border-white/30 hover:bg-white/10 transition-all">NUESTRA HISTORIA</a>
+    </section>
+
+    <!-- Presentación / Filosofía -->
+    <section>
+        <div class="container">
+            <h2>Un gimnasio donde el entrenamiento se siente</h2>
+            <p>Somos un gimnasio donde cada socio importa, donde tu compromiso es el nuestro y donde el progreso es real. Entrená en un espacio profesional, humano y pensado para que mejores día a día.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Constancia</h3>
+                    <p>Cada día es una oportunidad para ser mejor. Te acompañamos en cada paso.</p>
+                </div>
+                <div class="card">
+                    <h3>Compromiso</h3>
+                    <p>Un espacio donde cada socio importa y el trato es personalizado.</p>
+                </div>
+                <div class="card">
+                    <h3>Progreso Real</h3>
+                    <p>Resultados tangibles con seguimiento profesional y planificación.</p>
+                </div>
+            </div>
+            <p><strong>"Atletic no es un gimnasio más. Es una forma de entrenar."</strong></p>
+        </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="historia">
+        <div class="container">
+            <h2>El sueño de dos hermanos</h2>
+            <p>Atletic nació en el año 2021, con el sueño de dos hermanos y una idea clara: Revolucionar el mercado del fitness desde la pasión y la dedicación por el rubro. Desde el primer día apostamos a hacer las cosas bien, con esfuerzo, compromiso y una visión a largo plazo. Somos una empresa joven y familiar, que vive en constante crecimiento y desarrollo.</p>
+            <div class="grid">
+                <div class="card"><h3>Pasión</h3></div>
+                <div class="card"><h3>Crecimiento</h3></div>
+                <div class="card"><h3>Excelencia</h3></div>
             </div>
         </div>
     </section>
 
-    <section id="historia" class="py-24 bg-[#080808]">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative" data-aos="fade-right">
-                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69739cfa8df0181eb713af78/4d09b1cc5_WhatsAppImage2026-01-23at210106.jpeg" class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all">
-                <div class="absolute -bottom-6 -right-6 bg-[#D2C18D] p-8 text-black font-bold">
-                    <span class="text-4xl block">2021</span>
-                    <span class="text-xs">FUNDACIÓN</span>
-                </div>
-            </div>
-            <div data-aos="fade-left">
-                <h2 class="text-4xl font-bold mb-6">El sueño de <span class="text-[#D2C18D]">dos hermanos</span></h2>
-                <p class="text-gray-400 text-lg mb-6">Atletic nació en el año 2021 para revolucionar el mercado del fitness desde la pasión y la dedicación familiar.</p>
-                <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
-                    <div class="text-center"><p class="text-[#D2C18D] font-bold">Pasión</p></div>
-                    <div class="text-center"><p class="text-[#D2C18D] font-bold">Esfuerzo</p></div>
-                    <div class="text-center"><p class="text-[#D2C18D] font-bold">Excelencia</p></div>
-                </div>
+    <!-- Equipo -->
+    <section>
+        <div class="container">
+            <h2>En Atletic no entrenás solo</h2>
+            <p>Contamos con un equipo de profesionales comprometidos, presentes en el día a día, que acompañan, guían y se involucran en el proceso de cada socio. Creemos en el trato humano, en el seguimiento real y en estar disponibles cuando alguien lo necesita.</p>
+            <div class="grid">
+                <div class="card"><h3>Profesionales Comprometidos</h3><p>Presentes en el día a día, acompañando cada proceso.</p></div>
+                <div class="card"><h3>Trato Humano</h3><p>Seguimiento real y disponibilidad cuando lo necesitás.</p></div>
+                <div class="card"><h3>Sos Parte del Equipo</h3><p>Acá no sos un número: sos parte de la familia Atletic.</p></div>
             </div>
         </div>
     </section>
 
-    <section id="actividades" class="py-24 bg-[#0A0A0A]">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-16">Nuestras <span class="text-[#D2C18D]">Actividades</span></h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#111111] p-10 border border-white/5 hover:border-[#D2C18D]/50 transition-all" data-aos="zoom-in">
-                    <h3 class="text-2xl font-bold mb-4">Musculación</h3>
-                    <p class="text-gray-500 mb-6">Entrenamiento de fuerza con máquinas de última generación y peso libre.</p>
-                    <a href="https://wa.me/5491123947976" class="text-[#D2C18D] font-bold">CONSULTAR HORARIOS →</a>
-                </div>
-                <div class="bg-[#111111] p-10 border border-white/5 hover:border-[#D2C18D]/50 transition-all" data-aos="zoom-in" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-4">Funcional</h3>
-                    <p class="text-gray-500 mb-6">Mejorá tu movilidad, potencia y resistencia con circuitos dinámicos.</p>
-                    <a href="https://wa.me/5491123947976" class="text-[#D2C18D] font-bold">CONSULTAR HORARIOS →</a>
-                </div>
-                <div class="bg-[#111111] p-10 border border-white/5 hover:border-[#D2C18D]/50 transition-all" data-aos="zoom-in" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold mb-4">Calistenia</h3>
-                    <p class="text-gray-500 mb-6">Dominá tu propio peso corporal y ganá fuerza absoluta.</p>
-                    <a href="https://wa.me/5491123947976" class="text-[#D2C18D] font-bold">CONSULTAR HORARIOS →</a>
-                </div>
+    <!-- Acompañamiento -->
+    <section>
+        <div class="container">
+            <h2>Tu proceso, nuestro compromiso</h2>
+            <p>Uno de los pilares de Atletic es el acompañamiento a cada socio que arranca. Nuestro compromiso es que entrenes con confianza, seguridad y objetivos claros.</p>
+            <div class="grid">
+                <div class="card"><h3>Te guiamos</h3><p>Desde el primer día con un plan adaptado a vos</p></div>
+                <div class="card"><h3>Te seguimos</h3><p>Monitoreamos tu progreso constantemente</p></div>
+                <div class="card"><h3>Te acompañamos</h3><p>En cada paso de tu proceso de transformación</p></div>
+            </div>
+            <p><strong>"No creemos en dejarte solo: creemos en crecer juntos."</strong></p>
+            <p>Seguimiento Continuo Desde tu primer día con nosotros</p>
+        </div>
+    </section>
+
+    <!-- Actividades -->
+    <section id="actividades">
+        <div class="container">
+            <h2>Encontrá tu forma de entrenar</h2>
+            <p>Ofrecemos una amplia variedad de actividades pensadas para cada tipo de persona y objetivo.</p>
+            <div class="grid">
+                <div class="card">Musculación<br>Fuerza y control</div>
+                <div class="card">Funcional<br>Entrenamiento integral</div>
+                <div class="card">Cross<br>Alta intensidad</div>
+                <div class="card">GAP<br>Glúteos, abdomen y piernas</div>
+                <div class="card">Calistenia<br>Peso corporal</div>
+            </div>
+            <h2>Musculación</h2>
+            <p>Entrenamiento planificado, con acompañamiento profesional y máquinas propias. Ideal para ganar fuerza, mejorar tu físico y entrenar con criterio.</p>
+            <div class="grid">
+                <div class="card">Máquinas propias</div>
+                <div class="card">Entrenamiento planificado</div>
+                <div class="card">Seguimiento profesional</div>
             </div>
         </div>
     </section>
 
-    <section id="shop" class="py-24 bg-[#080808]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <span class="text-[#D2C18D] tracking-widest uppercase text-sm">Equipamiento</span>
-                    <h2 class="text-4xl font-bold">ATLETIC SHOP</h2>
-                </div>
-                <p class="text-gray-500 hidden md:block">Indumentaria oficial y accesorios</p>
+    <!-- Ubicación -->
+    <section>
+        <div class="container">
+            <h2>Ubicación Estratégica</h2>
+            <p>Creemos que entrenar sea una experiencia completa, sin estrés ni complicaciones, desde que llegás hasta que terminás tu rutina.</p>
+            <div class="grid">
+                <div class="card">Zona Segura<br>Ubicación tranquila y protegida</div>
+                <div class="card">Fácil Estacionamiento<br>Amplio espacio para tu vehículo</div>
+                <div class="card">Acceso Cómodo<br>Fácil llegada desde cualquier punto</div>
+                <div class="card">Sin Complicaciones<br>Desde que llegás hasta que te vas</div>
             </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group bg-[#111111] border border-white/5 overflow-hidden" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Remera Dry-Fit</h3>
-                        <p class="text-[#D2C18D] text-lg font-bold mb-4">$15.000</p>
-                        <a href="https://wa.me/5491123947976" class="block text-center bg-[#D2C18D] text-black py-3 font-bold hover:bg-[#fff]">COMPRAR</a>
-                    </div>
-                </div>
-                <div class="group bg-[#111111] border border-white/5 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Straps Pro</h3>
-                        <p class="text-[#D2C18D] text-lg font-bold mb-4">$8.500</p>
-                        <a href="https://wa.me/5491123947976" class="block text-center bg-[#D2C18D] text-black py-3 font-bold hover:bg-[#fff]">COMPRAR</a>
-                    </div>
-                </div>
-                <div class="group bg-[#111111] border border-white/5 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Mat Atletic</h3>
-                        <p class="text-[#D2C18D] text-lg font-bold mb-4">$12.000</p>
-                        <a href="https://wa.me/5491123947976" class="block text-center bg-[#D2C18D] text-black py-3 font-bold hover:bg-[#fff]">COMPRAR</a>
-                    </div>
-                </div>
+            <p>Av. Pellegrini 951, B6700 Luján, Provincia de Buenos Aires</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.5!2d-59.114!3d-34.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9e0b9b9b9b9b%3A0x9b9b9b9b9b9b9b9b!2sAv.%20Pellegrini%20951!5e0!3m2!1ses!2sar!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+            <p><a href="https://maps.app.goo.gl/4Q1i4NAqf7BVktpS6" target="_blank" class="btn">Cómo llegar</a></p>
+        </div>
+    </section>
+
+    <!-- Shop COMPLETA -->
+    <section class="shop">
+        <div class="container">
+            <h2>ATLETIC SHOP</h2>
+            <p>Suplementos y accesorios para potenciar tu entrenamiento.<br>Elegí los productos que te interesan y consultá precios y disponibilidad directamente por WhatsApp.</p>
+
+            <h3>🥤 Proteínas</h3>
+            <div class="productos-grid">
+                <div class="producto"><strong>Whey Protein Platinum 3kg</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Whey%20Protein%20Platinum%203kg" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Whey X-Pro + Creatina</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Whey%20X-Pro%20+%20Creatina" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Whey Protein ENA Truemade</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Whey%20Protein%20ENA%20Truemade" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Vegetal Protein Isolate</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Vegetal%20Protein%20Isolate" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Ganador de Peso Mutant Mass</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Ganador%20de%20Peso%20Mutant%20Mass" class="btn-agregar">Agregar</a></div>
+            </div>
+
+            <h3>⚡ Creatinas</h3>
+            <div class="productos-grid">
+                <div class="producto"><strong>Creatina Monohidratada Gold</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Creatina%20Monohidratada%20Gold" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Creatina Monohidratada Star</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Creatina%20Monohidratada%20Star" class="btn-agregar">Agregar</a></div>
+            </div>
+
+            <h3>💊 Suplementos</h3>
+            <div class="productos-grid">
+                <div class="producto"><strong>Pre Entreno Gold</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Pre%20Entreno%20Gold" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>BCAA Aminoácidos</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20BCAA%20Aminoácidos" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Vitamina C</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Vitamina%20C" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Omega 3 Fish Oil</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Omega%203%20Fish%20Oil" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Colágeno Hidrolizado</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Colágeno%20Hidrolizado" class="btn-agregar">Agregar</a></div>
+                <div class="producto"><strong>Pancakes Proteicos</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Pancakes%20Proteicos" class="btn-agregar">Agregar</a></div>
+            </div>
+
+            <h3>🧴 Accesorios</h3>
+            <div class="productos-grid">
+                <div class="producto"><strong>Botella de Aluminio Tryfit</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20consultar%20Botella%20de%20Aluminio%20Tryfit" class="btn-agregar">Agregar</a></div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-black text-center border-t border-white/5">
-        <p class="text-gray-500">© 2026 ATLETIC. Av. Pellegrini 951, Luján.</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-    </script>
+    <!-- JS (linkeado al archivo que creaste) -->
+    <script src="assets/script.js"></script>
 </body>
 </html>
