@@ -1,156 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATLETIC - Gimnasio</title>
+    <title>ATLETIC - Entrenar con propósito</title>
+    
+    <link href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697326e2defe187e0f027596/df6983266_459809829_1905421410279872_5845964124196582059_n.jpg" rel="icon">
+
+    <link rel="stylesheet" href="assets/index-CZSZ_8CV.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; line-height: 1.6; }
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
-        h1, h2, h3, h4 { text-align: center; }
-        a { text-decoration: none; }
-        
-        /* Navbar fijo negro */
-        .navbar { position: fixed; top: 0; width: 100%; background: black; color: white; padding: 15px 0; z-index: 1000; }
-        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: bold; color: white; }
-        .menu a { color: white; margin: 0 15px; font-size: 18px; }
-        .buttons a { padding: 10px 20px; border-radius: 5px; font-weight: bold; }
-        .btn-reservar { background: transparent; border: 2px solid white; color: white; margin-right: 10px; }
-        .btn-contacto { background: #d4af37; color: black; }
-        
-        /* Hero */
-        .hero { background: url('assets/hero-bg.jpg') center/cover no-repeat; color: white; text-align: center; padding: 150px 20px; margin-top: 80px; }
-        .hero h1 { font-size: 80px; margin: 0; }
-        .hero h3 { font-size: 40px; color: #d4af37; }
-        .hero p { font-size: 20px; max-width: 800px; margin: auto; }
-        .hero .buttons { margin-top: 30px; }
-        .hero .buttons a { background: #d4af37; color: black; padding: 15px 30px; margin: 10px; border-radius: 5px; font-size: 18px; }
-        
-        /* Secciones generales */
-        section { padding: 80px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: white; padding: 30px; text-align: center; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        
-        /* Shop */
-        .shop { background: #f8f8f8; }
-        .productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .producto { background: white; padding: 20px; border: 1px solid #ddd; border-radius: 10px; text-align: center; }
-        .btn-agregar { display: block; margin-top: 15px; padding: 10px; background: #d4af37; color: black; font-weight: bold; border-radius: 5px; }
-        
-        /* WhatsApp flotante */
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
-        .whatsapp-float img { width: 60px; }
-        
-        /* Mapa */
-        iframe { width: 100%; height: 400px; border: 0; border-radius: 10px; }
+        html { scroll-behavior: smooth; }
+        .bg-gradient-hero { background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 50%, #0A0A0A 100%); }
     </style>
 </head>
-<body>
+<body class="bg-[#0A0A0A] text-white">
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">ATLETIC</div>
-            <nav class="menu">
-                <a href="#inicio">Inicio</a>
-                <a href="#historia">Historia</a>
-                <a href="#equipo">Equipo</a>
-                <a href="#actividades">Actividades</a>
-            </nav>
-            <div class="buttons">
-                <a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20reservar%20una%20clase" class="btn-reservar">RESERVAR CLASE</a>
-                <a href="https://wa.me/TU_NUMERO_AQUI?text=Hola,%20quiero%20más%20info" class="btn-contacto">CONTACTO</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md py-4">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-white tracking-tight">ATLETIC</a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Inicio</a>
+                <a href="#historia" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Historia</a>
+                <a href="#equipo" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Equipo</a>
+                <a href="#actividades" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm">Actividades</a>
+                <a href="#shop" class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm font-bold text-[#D4AF37]">Shop</a>
+                <a href="https://wa.me/5491123947976" target="_blank" class="px-5 py-2.5 border border-[#D4AF37] text-[#D4AF37] font-semibold text-sm hover:bg-[#D4AF37] hover:text-black transition-all">RESERVAR</a>
+                <a href="https://wa.me/5491123947976" target="_blank" class="px-5 py-2.5 bg-[#D4AF37] text-black font-semibold text-sm hover:bg-[#E5C04B] transition-colors">CONTACTO</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="inicio">
-        <h2>GIMNASIO</h2>
-        <h1>ATLETIC</h1>
-        <h3>ENTRENAR CON PROPÓSITO</h3>
-        <p>En Atletic creemos que entrenar va mucho más allá del ejercicio. Es constancia, compromiso y acompañamiento.</p>
-        <div class="buttons">
-            <a href="#actividades">CONOCER ACTIVIDADES</a>
-            <a href="#historia">NUESTRA HISTORIA</a>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69739cfa8df0181eb713af78/de14bcca8_WhatsAppImage2026-01-23at210055.jpeg');">
+            <div class="absolute inset-0 bg-gradient-hero"></div>
         </div>
-    </section>
-
-    <!-- Filosofía/Presentación -->
-    <section>
-        <div class="container">
-            <h2>Un gimnasio donde el entrenamiento se siente</h2>
-            <p>Somos un gimnasio donde cada socio importa, donde tu compromiso es el nuestro y donde el progreso es real. Entrená en un espacio profesional, humano y pensado para que mejores día a día.</p>
-            <div class="grid">
-                <div class="card"><h3>Constancia</h3><p>Cada día es una oportunidad para ser mejor. Te acompañamos en cada paso.</p></div>
-                <div class="card"><h3>Compromiso</h3><p>Un espacio donde cada socio importa y el trato es personalizado.</p></div>
-                <div class="card"><h3>Progreso Real</h3><p>Resultados tangibles con seguimiento profesional y planificación.</p></div>
+        <div class="relative z-10 text-center px-6" data-aos="fade-up">
+            <span class="text-[#D2C18D] text-sm tracking-[0.3em] uppercase mb-4 block">Gimnasio</span>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">ATLETIC</h1>
+            <p class="text-xl md:text-2xl text-[#D2C18D] font-light mb-8">ENTRENAR CON PROPÓSITO</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#actividades" class="px-10 py-4 bg-[#D2C18D] text-black font-bold hover:scale-105 transition-transform">ACTIVIDADES</a>
+                <a href="#historia" class="px-10 py-4 border border-white/30 hover:bg-white/10 transition-all">NUESTRA HISTORIA</a>
             </div>
         </div>
     </section>
 
-    <!-- Historia -->
-    <section id="historia">
-        <div class="container">
-            <h2>Nuestra Historia</h2>
-            <p>Atletic nació en el año 2021, con el sueño de dos hermanos y una idea clara: Revolucionar el mercado del fitness desde la pasión y la dedicación por el rubro.</p>
-            <!-- Agregá más texto si querés -->
-        </div>
-    </section>
-
-    <!-- Equipo -->
-    <section id="equipo">
-        <div class="container">
-            <h2>Nuestro Equipo</h2>
-            <p>En Atletic no entrenás solo. Contamos con un equipo de profesionales comprometidos...</p>
-            <div class="grid">
-                <div class="card"><h3>Profesionales Comprometidos</h3><p>Presentes en el día a día...</p></div>
-                <!-- Completá las otras cards similar -->
+    <section id="historia" class="py-24 bg-[#080808]">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative" data-aos="fade-right">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69739cfa8df0181eb713af78/4d09b1cc5_WhatsAppImage2026-01-23at210106.jpeg" class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all">
+                <div class="absolute -bottom-6 -right-6 bg-[#D2C18D] p-8 text-black font-bold">
+                    <span class="text-4xl block">2021</span>
+                    <span class="text-xs">FUNDACIÓN</span>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="text-4xl font-bold mb-6">El sueño de <span class="text-[#D2C18D]">dos hermanos</span></h2>
+                <p class="text-gray-400 text-lg mb-6">Atletic nació en el año 2021 para revolucionar el mercado del fitness desde la pasión y la dedicación familiar.</p>
+                <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
+                    <div class="text-center"><p class="text-[#D2C18D] font-bold">Pasión</p></div>
+                    <div class="text-center"><p class="text-[#D2C18D] font-bold">Esfuerzo</p></div>
+                    <div class="text-center"><p class="text-[#D2C18D] font-bold">Excelencia</p></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Actividades -->
-    <section id="actividades">
-        <div class="container">
-            <h2>Actividades</h2>
-            <p>Encontrá tu forma de entrenar...</p>
-            <!-- Lista de actividades -->
-        </div>
-    </section>
-
-    <!-- Ubicación -->
-    <section id="ubicacion">
-        <div class="container">
-            <h2>Ubicación Estratégica</h2>
-            <p>Av. Pellegrini 951, B6700 Luján, Provincia de Buenos Aires</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.123456789!2d-59.123456!3d-34.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM0JzI4LjAiUyA1OcKwMDcnMjIuMCJX!5e0!3m2!1ses!2sar!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
-            <p style="text-align:center;"><a href="https://maps.app.goo.gl/4Q1i4NAqf7BVktpS6" target="_blank">Cómo llegar</a></p>
-        </div>
-    </section>
-
-    <!-- Shop (completa, como en el original) -->
-    <section class="shop" id="shop">
-        <div class="container">
-            <h2>ATLETIC SHOP</h2>
-            <p>Suplementos y accesorios para potenciar tu entrenamiento.<br>Elegí los productos que te interesan y consultá precios y disponibilidad directamente por WhatsApp.</p>
-
-            <h3>🥤 Proteínas</h3>
-            <div class="productos-grid">
-                <div class="producto"><strong>Whey Protein Platinum 3kg</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20Whey%20Protein%20Platinum%203kg" class="btn-agregar">Agregar</a></div>
-                <div class="producto"><strong>Whey X-Pro + Creatina</strong><br>0<br><a href="https://wa.me/TU_NUMERO_AQUI?text=Quiero%20Whey%20X-Pro%20+%20Creatina" class="btn-agregar">Agregar</a></div>
-                <!-- Repetí para los demás productos como en mi mensaje anterior -->
+    <section id="actividades" class="py-24 bg-[#0A0A0A]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-16">Nuestras <span class="text-[#D2C18D]">Actividades</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#111111] p-10 border border-white/5 hover:border-[#D2C18D]/50 transition-all" data-aos="zoom-in">
+                    <h3 class="text-2xl font-bold mb-4">Musculación</h3>
+                    <p class="text-gray-500 mb-6">Entrenamiento de fuerza con máquinas de última generación y peso libre.</p>
+                    <a href="https://wa.me/5491123947976" class="text-[#D2C18D] font-bold">CONSULTAR HORARIOS →</a>
+                </div>
+                <div class="bg-[#111111] p-10 border border-white/5 hover:border-[#D2C18D]/50 transition-all" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-4">Funcional</h3>
+                    <p class="text-gray-500 mb-6">Mejorá tu movilidad, potencia y resistencia con circuitos dinámicos.</p>
+                    <a href="https://wa.me/5491123947976" class="text-[#D2C18D] font-bold">CONSULTAR HORARIOS →</a>
+                </div>
+                <div class="bg-[#111111] p-10 border border-white/5 hover:border-[#D2C18D]/50 transition-all" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-4">Calistenia</h3>
+                    <p class="text-gray-500 mb-6">Dominá tu propio peso corporal y ganá fuerza absoluta.</p>
+                    <a href="https://wa.me/5491123947976" class="text-[#D2C18D] font-bold">CONSULTAR HORARIOS →</a>
+                </div>
             </div>
-
-            <!-- Creatinas, Suplementos y Accesorios igual que antes -->
         </div>
     </section>
 
-    <!-- Botón WhatsApp flotante -->
-    <a href="https://wa.me/TU_NUMERO_AQUI?text=Hola,%20quiero%20info" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
+    <section id="shop" class="py-24 bg-[#080808]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-[#D2C18D] tracking-widest uppercase text-sm">Equipamiento</span>
+                    <h2 class="text-4xl font-bold">ATLETIC SHOP</h2>
+                </div>
+                <p class="text-gray-500 hidden md:block">Indumentaria oficial y accesorios</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-[#111111] border border-white/5 overflow-hidden" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Remera Dry-Fit</h3>
+                        <p class="text-[#D2C18D] text-lg font-bold mb-4">$15.000</p>
+                        <a href="https://wa.me/5491123947976" class="block text-center bg-[#D2C18D] text-black py-3 font-bold hover:bg-[#fff]">COMPRAR</a>
+                    </div>
+                </div>
+                <div class="group bg-[#111111] border border-white/5 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Straps Pro</h3>
+                        <p class="text-[#D2C18D] text-lg font-bold mb-4">$8.500</p>
+                        <a href="https://wa.me/5491123947976" class="block text-center bg-[#D2C18D] text-black py-3 font-bold hover:bg-[#fff]">COMPRAR</a>
+                    </div>
+                </div>
+                <div class="group bg-[#111111] border border-white/5 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mat Atletic</h3>
+                        <p class="text-[#D2C18D] text-lg font-bold mb-4">$12.000</p>
+                        <a href="https://wa.me/5491123947976" class="block text-center bg-[#D2C18D] text-black py-3 font-bold hover:bg-[#fff]">COMPRAR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer class="py-12 bg-black text-center border-t border-white/5">
+        <p class="text-gray-500">© 2026 ATLETIC. Av. Pellegrini 951, Luján.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 </body>
 </html>
