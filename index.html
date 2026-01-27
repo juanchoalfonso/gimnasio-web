@@ -4,36 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atletic</title>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 </head>
+
 
 <body class="bg-black text-white font-sans">
 
 <!-- HERO -->
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-  <span class="text-sm tracking-widest text-gray-400 mb-6">
-    ENTRENAMIENTO • FUERZA • DISCIPLINA
-  </span>
-
-  <h1 class="text-5xl md:text-7xl font-extrabold leading-tight max-w-4xl">
-    Construí tu mejor versión
-  </h1>
-
-  <p class="text-gray-400 mt-6 max-w-xl">
-    Entrenamiento de alto rendimiento en un espacio diseñado para superarte todos los días.
+  <p class="uppercase tracking-[0.35em] text-xs text-zinc-500 mb-10">
+    High Performance Training
   </p>
 
-  <div class="mt-10 flex gap-4">
+  <h1 class="text-[clamp(3rem,6vw,5.5rem)] font-black leading-[1.05] max-w-5xl">
+    Train harder.<br />
+    Become stronger.
+  </h1>
+
+  <p class="text-zinc-400 mt-10 max-w-xl text-lg">
+    A premium training space built for discipline, strength and consistency.
+  </p>
+
+  <div class="mt-14 flex gap-6">
     <a href="#planes"
-       class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-      Ver planes
+       class="bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-zinc-200 transition">
+      View plans
     </a>
     <a href="#contacto"
-       class="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition">
-      Contactanos
+       class="border border-zinc-700 px-10 py-4 rounded-full font-semibold hover:border-white transition">
+      Contact
     </a>
   </div>
 </section>
+
 
 <!-- SEPARADOR -->
 <div class="h-px bg-zinc-800"></div>
@@ -42,26 +63,29 @@
 <section class="py-24 px-6 max-w-7xl mx-auto">
   <div class="grid md:grid-cols-3 gap-10">
 
-    <div class="border border-zinc-800 p-8 rounded-2xl hover:border-white transition">
-      <h3 class="text-xl font-semibold mb-4">Entrenadores</h3>
-      <p class="text-gray-400">
-        Profesionales que te acompañan en cada etapa del proceso.
-      </p>
-    </div>
+    <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
+  <h3 class="text-2xl font-semibold mb-4">Personal Coaching</h3>
+  <p class="text-zinc-400 leading-relaxed">
+    Professional guidance tailored to your goals and performance.
+  </p>
+</div>
 
-    <div class="border border-zinc-800 p-8 rounded-2xl hover:border-white transition">
-      <h3 class="text-xl font-semibold mb-4">Equipamiento</h3>
-      <p class="text-gray-400">
-        Máquinas de última generación y espacios funcionales.
-      </p>
-    </div>
 
-    <div class="border border-zinc-800 p-8 rounded-2xl hover:border-white transition">
-      <h3 class="text-xl font-semibold mb-4">Resultados</h3>
-      <p class="text-gray-400">
-        Programas diseñados para fuerza, estética y rendimiento.
-      </p>
-    </div>
+    <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
+  <h3 class="text-2xl font-semibold mb-4">Personal Coaching</h3>
+  <p class="text-zinc-400 leading-relaxed">
+    Professional guidance tailored to your goals and performance.
+  </p>
+</div>
+
+
+    <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
+  <h3 class="text-2xl font-semibold mb-4">Personal Coaching</h3>
+  <p class="text-zinc-400 leading-relaxed">
+    Professional guidance tailored to your goals and performance.
+  </p>
+</div>
+
 
   </div>
 </section>
