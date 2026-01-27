@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>ATLETIC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Atletic</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
     tailwind.config = {
@@ -19,119 +20,124 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
           },
+          colors: {
+            bg: '#0A0A0A'
+          }
         }
       }
     }
   </script>
 </head>
 
-
-<body class="bg-black text-white font-sans">
+<body class="bg-bg text-white font-sans">
 
 <!-- HERO -->
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-  <p class="uppercase tracking-[0.35em] text-xs text-zinc-500 mb-10">
-    High Performance Training
+  <p class="uppercase tracking-[0.35em] text-xs text-zinc-500 mb-12">
+    High performance training
   </p>
 
-  <h1 class="text-[clamp(3rem,6vw,5.5rem)] font-black leading-[1.05] max-w-5xl">
-    Train harder.<br />
+  <h1 class="text-[clamp(3.2rem,6vw,5.8rem)] font-black leading-[1.05] max-w-5xl">
+    Train harder.<br>
     Become stronger.
   </h1>
 
-  <p class="text-zinc-400 mt-10 max-w-xl text-lg">
+  <p class="text-zinc-400 mt-12 max-w-xl text-lg">
     A premium training space built for discipline, strength and consistency.
   </p>
 
-  <div class="mt-14 flex gap-6">
-    <a href="#planes"
-       class="bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-zinc-200 transition">
+  <div class="mt-16 flex gap-6 flex-wrap justify-center">
+    <a href="#plans"
+       class="bg-white text-black px-12 py-4 rounded-full font-semibold hover:bg-zinc-200 transition">
       View plans
     </a>
-    <a href="#contacto"
-       class="border border-zinc-700 px-10 py-4 rounded-full font-semibold hover:border-white transition">
+
+    <a href="#contact"
+       class="border border-zinc-700 px-12 py-4 rounded-full font-semibold hover:border-white transition">
       Contact
     </a>
   </div>
 </section>
 
-
-<!-- SEPARADOR -->
+<!-- DIVIDER -->
 <div class="h-px bg-zinc-800"></div>
 
 <!-- FEATURES -->
-<section class="py-24 px-6 max-w-7xl mx-auto">
-  <div class="grid md:grid-cols-3 gap-10">
+<section class="py-32 px-6 max-w-7xl mx-auto">
+  <div class="grid md:grid-cols-3 gap-12">
 
     <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
-  <h3 class="text-2xl font-semibold mb-4">Personal Coaching</h3>
-  <p class="text-zinc-400 leading-relaxed">
-    Professional guidance tailored to your goals and performance.
-  </p>
-</div>
-
-
-    <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
-  <h3 class="text-2xl font-semibold mb-4">Personal Coaching</h3>
-  <p class="text-zinc-400 leading-relaxed">
-    Professional guidance tailored to your goals and performance.
-  </p>
-</div>
-
-
-    <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
-  <h3 class="text-2xl font-semibold mb-4">Personal Coaching</h3>
-  <p class="text-zinc-400 leading-relaxed">
-    Professional guidance tailored to your goals and performance.
-  </p>
-</div>
-
-
-  </div>
-</section>
-
-<!-- PLANES -->
-<section id="planes" class="py-24 px-6 bg-zinc-950">
-  <h2 class="text-4xl font-bold text-center mb-16">
-    Planes
-  </h2>
-
-  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-    <div class="border border-zinc-800 p-8 rounded-2xl">
-      <h3 class="text-xl font-semibold mb-4">Mensual</h3>
-      <p class="text-gray-400 mb-6">Acceso completo al gimnasio</p>
-      <p class="text-3xl font-bold">$XX.XXX</p>
+      <h3 class="text-2xl font-semibold mb-4">Personal Coaching</h3>
+      <p class="text-zinc-400 leading-relaxed">
+        Professional guidance tailored to your goals and performance.
+      </p>
     </div>
 
-    <div class="border border-white p-8 rounded-2xl scale-105">
-      <h3 class="text-xl font-semibold mb-4">Trimestral</h3>
-      <p class="text-gray-400 mb-6">Mejor relación precio / constancia</p>
-      <p class="text-3xl font-bold">$XX.XXX</p>
+    <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
+      <h3 class="text-2xl font-semibold mb-4">Modern Equipment</h3>
+      <p class="text-zinc-400 leading-relaxed">
+        High-end machines and functional training spaces.
+      </p>
     </div>
 
-    <div class="border border-zinc-800 p-8 rounded-2xl">
-      <h3 class="text-xl font-semibold mb-4">Anual</h3>
-      <p class="text-gray-400 mb-6">Compromiso total</p>
-      <p class="text-3xl font-bold">$XX.XXX</p>
+    <div class="border border-zinc-800 rounded-2xl p-10 hover:border-white transition-all duration-300">
+      <h3 class="text-2xl font-semibold mb-4">Real Results</h3>
+      <p class="text-zinc-400 leading-relaxed">
+        Programs designed for strength, aesthetics and endurance.
+      </p>
     </div>
 
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section id="contacto" class="py-32 px-6 text-center">
-  <h2 class="text-4xl font-bold mb-6">
-    Empezá hoy
+<!-- PLANS -->
+<section id="plans" class="py-32 px-6 bg-black">
+  <h2 class="text-4xl md:text-5xl font-bold text-center mb-20">
+    Membership plans
   </h2>
-  <p class="text-gray-400 mb-10">
-    Coordiná tu primera visita y conocé el espacio.
+
+  <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+
+    <div class="border border-zinc-800 rounded-2xl p-10">
+      <h3 class="text-2xl font-semibold mb-4">Monthly</h3>
+      <p class="text-zinc-400 mb-8">Full gym access</p>
+      <p class="text-4xl font-bold">$XX.XXX</p>
+    </div>
+
+    <div class="border border-white rounded-2xl p-10 scale-105">
+      <h3 class="text-2xl font-semibold mb-4">Quarterly</h3>
+      <p class="text-zinc-400 mb-8">Best value option</p>
+      <p class="text-4xl font-bold">$XX.XXX</p>
+    </div>
+
+    <div class="border border-zinc-800 rounded-2xl p-10">
+      <h3 class="text-2xl font-semibold mb-4">Annual</h3>
+      <p class="text-zinc-400 mb-8">Total commitment</p>
+      <p class="text-4xl font-bold">$XX.XXX</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="py-40 px-6 text-center">
+  <h2 class="text-4xl md:text-5xl font-bold mb-8">
+    Start today
+  </h2>
+
+  <p class="text-zinc-400 max-w-xl mx-auto mb-14">
+    Schedule your first visit and experience the space.
   </p>
 
   <a href="https://wa.me/549XXXXXXXXXX"
-     class="bg-white text-black px-10 py-4 rounded-full font-semibold hover:bg-gray-200 transition">
-    Escribir por WhatsApp
+     class="bg-white text-black px-14 py-5 rounded-full font-semibold hover:bg-zinc-200 transition">
+    Contact via WhatsApp
   </a>
 </section>
 
-<footer class="py-8 text-
+<footer class="py-10 text-center text-zinc-500 text-sm">
+  © 2026 ATLETIC
+</footer>
+
+</body>
+</html>
