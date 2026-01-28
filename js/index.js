@@ -271,29 +271,38 @@ document.querySelectorAll('button[data-activity]').forEach(btn => {
         panelInner.style.opacity = '0';
         
         setTimeout(() => {
-            // Cambiar Imagen
+            // 1. Cambiar Imagen, Icono, Título y Descripción
             document.querySelector('#actividades .lg\\:col-span-8 img').src = data.img;
-
-            // Cambiar Icono (NUEVO)
             document.getElementById('activity-icon-container').innerHTML = data.icon;
-
-            // Cambiar Título y Descripción
             document.querySelector('#actividades .lg\\:col-span-8 h3').innerText = data.title;
             document.querySelector('#actividades .lg\\:col-span-8 p').innerText = data.desc;
 
-            // Cambiar Tags
-            document.querySelector('#actividades .flex-wrap').innerHTML = data.tags.map(t => `<span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">${t}</span>`).join('');
+            // 2. Cambiar Tags
+            document.querySelector('#actividades .flex-wrap').innerHTML = data.tags.map(t => 
+                `<span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">${t}</span>`
+            ).join('');
 
             panelInner.style.opacity = '1';
         }, 200);
 
-        // Estilos de botones
+        // 3. Estilos de botones (ACTIVO vs INACTIVO)
         document.querySelectorAll('button[data-activity]').forEach(b => {
+            // Volver a estado oscuro
             b.classList.remove('bg-[#D2C18D]', 'text-black');
             b.classList.add('bg-[#111111]', 'text-white');
+            
+            // El icono del botón vuelve a ser dorado
+            const icon = b.querySelector('svg');
+            if (icon) icon.style.color = '#D2C18D';
         });
+
+        // Aplicar estado dorado al botón clickeado
         btn.classList.add('bg-[#D2C18D]', 'text-black');
         btn.classList.remove('bg-[#111111]', 'text-white');
+        
+        // El icono de este botón pasa a ser negro para que se vea bien
+        const activeIcon = btn.querySelector('svg');
+        if (activeIcon) activeIcon.style.color = 'black';
     });
 });
    
