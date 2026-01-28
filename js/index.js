@@ -127,4 +127,77 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- 6. LÓGICA DEL CARRITO DE COMPRAS ---
+    let cart = [];
+
+    function updateCartUI() {
+        const cartContainer = document.getElementById('cart-container');
+        const cartItems = document.getElementById('cart-items');
+        const cartCount = document.getElementById('cart-count');
+
+        // Mostrar/Ocultar carrito si está vacío
+        if (cart.length === 0) {
+            cartContainer.classList.add('hidden');
+            return;
+        }
+        cartContainer.classList.remove('hidden');
+
+        // Actualizar contador y lista
+        cartCount.innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
+        cartItems.innerHTML = cart.map(item => `
+        <div class="flex items-center justify-between text-white text-xs border-b border-white/5 pb-2">
+            <div class="flex items-center gap-3">
+                <img src="${item.img}" class="w-8 h-8 object-cover">
+                <span>${item.name}</span>
+            </div>
+            <span class="text-[#D2C18D] font-bold">x${item.quantity}</span>
+        </div>
+    `).join('');
+    }
+
+    // Escuchar clics en el Shop
+    document.getElementById('shop').addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+
+        // Buscamos el contenedor del producto
+        const productCard = btn.closest('.bg-[#111111]');
+        const productName = productCard.querySelector('h3').innerText;
+        const productImg = productCard.querySelector('img').getAttribute('src');
+
+        if (btn.innerText.includes('Agregar') || btn.querySelector('.lucide-plus')) {
+            const existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name: productName, img: productImg, quantity: 1 });
+            }
+        } else if (btn.querySelector('.lucide-minus')) {
+            const index = cart.findIndex(item => item.name === productName);
+            if (index !== -1) {
+                cart[index].quantity--;
+                if (cart[index].quantity === 0) cart.splice(index, 1);
+            }
+        }
+        updateCartUI();
+    });
+
+    // Botón de WhatsApp
+    document.getElementById('whatsapp-order').addEventListener('click', () => {
+        let message = "¡Hola Atletic! 👋 Quiero realizar el siguiente pedido:\n\n";
+        cart.forEach(item => {
+            message += `• ${item.name} (Cantidad: ${item.quantity})\n`;
+        });
+        message += "\n¿Tienen disponibilidad?";
+
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/5491123947976?text=${encodedMessage}`, '_blank');
+    });
+
+    // Vaciar carrito
+    document.getElementById('clear-cart').addEventListener('click', () => {
+        cart = [];
+        updateCartUI();
+    });
 });
