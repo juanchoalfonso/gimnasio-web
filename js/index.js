@@ -227,33 +227,38 @@ document.getElementById('clear-cart')?.addEventListener('click', () => {
 const activityDetails = {
     musculacion: {
         title: "Musculación",
-        desc: "Entrenamiento planificado con máquinas de última generación y seguimiento profesional para hipertrofia y fuerza.",
+        desc: "Entrenamiento planificado, con acompañamiento profesional y máquinas propias. Ideal para ganar fuerza, mejorar tu físico y entrenar con criterio.",
         img: "assets/overview4.jpeg",
-        tags: ["Fuerza", "Máquinas", "Personalizado"]
+        tags: ["Máquinas propias", "Entrenamiento planificado", "Seguimiento profesional"],
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dumbbell w-8 h-8 text-[#D2C18D]"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg>'
     },
     funcional: {
         title: "Funcional",
-        desc: "Mejorá tu capacidad física real con ejercicios que imitan movimientos cotidianos. Ideal para agilidad y salud integral.",
-        img: "assets/hero-bg.jpg", 
-        tags: ["Agilidad", "Core", "Dinámico"]
+        desc: "Trabajo integral del cuerpo, en grupos guiados, dinámicos y adaptables a todos los niveles.",
+        img: "assets/plancha.jpeg", 
+        tags: ["Grupos reducidos", "Todos los niveles", "Dinámico y variado"],
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-8 h-8 text-[#D2C18D]"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>'
     },
     cross: {
         title: "Cross",
-        desc: "Alta intensidad y variabilidad constante. Combinamos levantamiento, gimnasia y cardio en el WOD del día.",
-        img: "assets/santi_soga.jpeg",
-        tags: ["WOD", "Intensidad", "Comunidad"]
+        desc: "Entrenamientos intensos, progresivos y desafiantes, enfocados en fuerza, resistencia y comunidad.",
+        img: "assets/sentadilla.jpeg",
+        tags: ["Intensidad progresiva", "Comunidad activa", "Resultados rápidos"],
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame w-8 h-8 text-[#D2C18D]"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>'
     },
     gap: {
         title: "GAP",
-        desc: "Clase enfocada 100% en Glúteos, Abdomen y Piernas. Tonificación específica con resultados visibles.",
-        img: "assets/overview1.jpeg",
-        tags: ["Tonificación", "Localizado", "Fitness"]
+        desc: "Trabajo específico de glúteos, abdomen y piernas, con clases organizadas y objetivos claros.",
+        img: "assets/step.jpeg",
+        tags: ["Trabajo localizado", "Clases grupales", "Tonificación efectiva"],
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-8 h-8 text-[#D2C18D]"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
     },
     calistenia: {
         title: "Calistenia",
-        desc: "Dominá tu peso corporal. Desde básicos hasta trucos avanzados en barra, desarrollando una fuerza increíble.",
-        img: "assets/overview4.jpeg",
-        tags: ["Barras", "Peso Corporal", "Control"]
+        desc: "Entrenamiento con el peso corporal, enfocado en fuerza real, control y movilidad.",
+        img: "assets/calistenia.jpg",
+        tags: ["Sin equipamiento", "Fuerza funcional", "Control corporal"],
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-person-standing w-8 h-8 text-[#D2C18D]"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>'
     }
 };
 
@@ -261,39 +266,34 @@ document.querySelectorAll('button[data-activity]').forEach(btn => {
     btn.addEventListener('click', () => {
         const act = btn.getAttribute('data-activity');
         const data = activityDetails[act];
-
-        // 1. Efecto de transición (opacidad)
         const panelInner = document.querySelector('#actividades .lg\\:col-span-8 > div');
+        
         panelInner.style.opacity = '0';
         
         setTimeout(() => {
-            // 2. Cambiar Imagen
-            const img = document.querySelector('#actividades .lg\\:col-span-8 img');
-            img.src = data.img;
-            img.alt = data.title;
+            // Cambiar Imagen
+            document.querySelector('#actividades .lg\\:col-span-8 img').src = data.img;
 
-            // 3. Cambiar Textos
+            // Cambiar Icono (NUEVO)
+            document.getElementById('activity-icon-container').innerHTML = data.icon;
+
+            // Cambiar Título y Descripción
             document.querySelector('#actividades .lg\\:col-span-8 h3').innerText = data.title;
             document.querySelector('#actividades .lg\\:col-span-8 p').innerText = data.desc;
 
-            // 4. Cambiar Tags
-            const tagsDiv = document.querySelector('#actividades .flex-wrap');
-            tagsDiv.innerHTML = data.tags.map(t => `<span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">${t}</span>`).join('');
+            // Cambiar Tags
+            document.querySelector('#actividades .flex-wrap').innerHTML = data.tags.map(t => `<span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">${t}</span>`).join('');
 
-            // 5. Volver a mostrar
             panelInner.style.opacity = '1';
         }, 200);
 
-        // 6. Resaltar botón activo
+        // Estilos de botones
         document.querySelectorAll('button[data-activity]').forEach(b => {
             b.classList.remove('bg-[#D2C18D]', 'text-black');
             b.classList.add('bg-[#111111]', 'text-white');
-            b.querySelector('svg')?.classList.remove('text-black');
-            b.querySelector('svg')?.classList.add('text-[#D2C18D]');
         });
         btn.classList.add('bg-[#D2C18D]', 'text-black');
         btn.classList.remove('bg-[#111111]', 'text-white');
-        btn.querySelector('svg')?.classList.add('text-black');
     });
 });
    
