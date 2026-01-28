@@ -222,5 +222,79 @@ document.getElementById('clear-cart')?.addEventListener('click', () => {
     // Reseteamos los numeritos "0" en las tarjetas de la tienda
     document.querySelectorAll('span.text-white.w-6').forEach(s => s.innerText = "0");
 });
+
+// --- 8. LÓGICA DE CAMBIO DE ACTIVIDADES ---
+const activityDetails = {
+    musculacion: {
+        title: "Musculación",
+        desc: "Entrenamiento planificado con máquinas de última generación y seguimiento profesional para hipertrofia y fuerza.",
+        img: "assets/overview4.jpeg",
+        tags: ["Fuerza", "Máquinas", "Personalizado"]
+    },
+    funcional: {
+        title: "Funcional",
+        desc: "Mejorá tu capacidad física real con ejercicios que imitan movimientos cotidianos. Ideal para agilidad y salud integral.",
+        img: "assets/hero-bg.jpg", 
+        tags: ["Agilidad", "Core", "Dinámico"]
+    },
+    cross: {
+        title: "Cross",
+        desc: "Alta intensidad y variabilidad constante. Combinamos levantamiento, gimnasia y cardio en el WOD del día.",
+        img: "assets/santi_soga.jpeg",
+        tags: ["WOD", "Intensidad", "Comunidad"]
+    },
+    gap: {
+        title: "GAP",
+        desc: "Clase enfocada 100% en Glúteos, Abdomen y Piernas. Tonificación específica con resultados visibles.",
+        img: "assets/overview1.jpeg",
+        tags: ["Tonificación", "Localizado", "Fitness"]
+    },
+    calistenia: {
+        title: "Calistenia",
+        desc: "Dominá tu peso corporal. Desde básicos hasta trucos avanzados en barra, desarrollando una fuerza increíble.",
+        img: "assets/overview4.jpeg",
+        tags: ["Barras", "Peso Corporal", "Control"]
+    }
+};
+
+document.querySelectorAll('button[data-activity]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const act = btn.getAttribute('data-activity');
+        const data = activityDetails[act];
+
+        // 1. Efecto de transición (opacidad)
+        const panelInner = document.querySelector('#actividades .lg\\:col-span-8 > div');
+        panelInner.style.opacity = '0';
+        
+        setTimeout(() => {
+            // 2. Cambiar Imagen
+            const img = document.querySelector('#actividades .lg\\:col-span-8 img');
+            img.src = data.img;
+            img.alt = data.title;
+
+            // 3. Cambiar Textos
+            document.querySelector('#actividades .lg\\:col-span-8 h3').innerText = data.title;
+            document.querySelector('#actividades .lg\\:col-span-8 p').innerText = data.desc;
+
+            // 4. Cambiar Tags
+            const tagsDiv = document.querySelector('#actividades .flex-wrap');
+            tagsDiv.innerHTML = data.tags.map(t => `<span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">${t}</span>`).join('');
+
+            // 5. Volver a mostrar
+            panelInner.style.opacity = '1';
+        }, 200);
+
+        // 6. Resaltar botón activo
+        document.querySelectorAll('button[data-activity]').forEach(b => {
+            b.classList.remove('bg-[#D2C18D]', 'text-black');
+            b.classList.add('bg-[#111111]', 'text-white');
+            b.querySelector('svg')?.classList.remove('text-black');
+            b.querySelector('svg')?.classList.add('text-[#D2C18D]');
+        });
+        btn.classList.add('bg-[#D2C18D]', 'text-black');
+        btn.classList.remove('bg-[#111111]', 'text-white');
+        btn.querySelector('svg')?.classList.add('text-black');
+    });
+});
    
 });
