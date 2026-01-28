@@ -106,21 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- 5. NAVEGACIÓN DEL MENÚ (SCROLL A SECCIONES) ---
+   // --- 5. NAVEGACIÓN DEL MENÚ (SCROLL A SECCIONES) ---
     const navButtons = document.querySelectorAll('nav button');
 
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const sectionText = button.textContent.toLowerCase().trim();
             
-            // Mapeamos el texto del botón al ID de la sección
-            // Si el botón dice "Inicio", va arriba de todo.
-            if (sectionText === 'inicio') {
+            // Si el botón dice "Inicio" o es el logo "Atletic", sube al inicio
+            if (sectionText === 'inicio' || sectionText === 'atletic') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 return;
             }
 
-            // Para los demás (historia, equipo, actividades, shop)
+            // Para los demás botones, busca por ID
             const targetSection = document.getElementById(sectionText);
 
             if (targetSection) {
