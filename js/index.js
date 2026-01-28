@@ -207,7 +207,7 @@ document.getElementById('whatsapp-order')?.addEventListener('click', () => {
     
     // Lista de productos con emojis para que quede prolijo
     cart.forEach(item => {
-        message += `✅ ${item.name} (x${item.quantity})\n`;
+        message += `• ${item.name} (x${item.quantity})\n`;
     });
     
     message += "\nMuchas gracias. ¿Me confirman disponibilidad?";
