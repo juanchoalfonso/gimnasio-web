@@ -200,18 +200,27 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Configurar botones de WhatsApp y Vaciar (con chequeo de existencia)
-setTimeout(() => {
-    document.getElementById('whatsapp-order')?.addEventListener('click', () => {
-        let msg = "Hola Atletic! 👋 Mi pedido es:\n\n" + cart.map(i => `- ${i.name} (x${i.quantity})`).join('\n');
-        window.open(`https://wa.me/5491123947976?text=${encodeURIComponent(msg)}`, '_blank');
+// --- 7. ACCIONES DEL CARRITO (WHATSAPP Y VACIAR) ---
+document.getElementById('whatsapp-order')?.addEventListener('click', () => {
+    // El encabezado que pediste
+    let message = "Hola Atletic Fitt! Me gustaría hacer el siguiente pedido:\n\n";
+    
+    // Lista de productos con emojis para que quede prolijo
+    cart.forEach(item => {
+        message += `✅ ${item.name} (x${item.quantity})\n`;
     });
+    
+    message += "\nMuchas gracias. ¿Me confirman disponibilidad?";
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/5491123947976?text=${encodedMessage}`, '_blank');
+});
 
-    document.getElementById('clear-cart')?.addEventListener('click', () => {
-        cart = [];
-        updateCartUI();
-        document.querySelectorAll('span.text-white.w-6').forEach(s => s.innerText = "0");
-    });
-}, 1000);
+document.getElementById('clear-cart')?.addEventListener('click', () => {
+    cart = [];
+    updateCartUI();
+    // Reseteamos los numeritos "0" en las tarjetas de la tienda
+    document.querySelectorAll('span.text-white.w-6').forEach(s => s.innerText = "0");
+});
    
 });
