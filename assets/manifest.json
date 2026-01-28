@@ -1,0 +1,22 @@
+{
+  "name": "ATLETIC",
+  "short_name": "ATLETIC",
+  "description": "Atletic is a premium gym that goes beyond exercise, offering a professional, human-centric environment focused on constant progress. We provide personalized guidance, a variety of activities from weightlifting to functional training and calisthenics, and an on-site shop for all your fitness needs. V0.5\n",
+  "icons": [
+    {
+      "src": "assets/logo_atletic.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/logo_atletic.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": "https://juanchoalfonso.github.io/gimnasio-web/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "scope": "https://juanchoalfonso.github.io/gimnasio-web/"
+}
