@@ -129,80 +129,96 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- 6. LÓGICA DEL CARRITO DE COMPRAS (SÚPER REFORZADA) ---
-    let cart = [];
+    // --- 6. LÓGICA DEL CARRITO DE COMPRAS CON GESTIÓN DE BOTONES ---
+let cart = [];
 
-    function updateCartUI() {
-        const cartContainer = document.getElementById('cart-container');
-        const cartItems = document.getElementById('cart-items');
-        const cartCount = document.getElementById('cart-count');
-        
-        if (!cartContainer || !cartItems) return;
-
-        if (cart.length === 0) {
-            cartContainer.classList.add('hidden');
-            return;
-        }
-        cartContainer.classList.remove('hidden');
-
-        cartCount.innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
-        cartItems.innerHTML = cart.map(item => `
-            <div class="flex items-center justify-between text-white text-xs border-b border-white/5 pb-2">
-                <div class="flex items-center gap-3">
-                    <img src="${item.img}" class="w-8 h-8 object-cover rounded">
-                    <span>${item.name}</span>
-                </div>
-                <span class="text-[#D2C18D] font-bold">x${item.quantity}</span>
-            </div>
-        `).join('');
+function updateCartUI() {
+    const cartContainer = document.getElementById('cart-container');
+    const cartItems = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    
+    if (cart.length === 0) {
+        cartContainer.classList.add('hidden');
+        // Si el carrito se vacía, nos aseguramos que todos los "menos" del shop se bloqueen
+        document.querySelectorAll('#shop button .lucide-minus').forEach(icon => {
+            icon.closest('button').disabled = true;
+        });
+        document.querySelectorAll('#shop span.text-white.w-6').forEach(s => s.innerText = "0");
+        return;
     }
+    
+    cartContainer.classList.remove('hidden');
+    cartCount.innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
+    
+    cartItems.innerHTML = cart.map(item => `
+        <div class="flex items-center justify-between text-white text-xs border-b border-white/5 pb-2">
+            <div class="flex items-center gap-3">
+                <img src="${item.img}" class="w-8 h-8 object-cover rounded">
+                <span>${item.name}</span>
+            </div>
+            <span class="text-[#D2C18D] font-bold">x${item.quantity}</span>
+        </div>
+    `).join('');
+}
 
-    // Escuchamos clics en toda la sección Shop
-    const shopSection = document.getElementById('shop');
-    if (shopSection) {
-        shopSection.addEventListener('click', (e) => {
-            // Buscamos si lo que se clickeó es un botón o está adentro de uno
-            const btn = e.target.closest('button');
-            if (!btn) return;
+const shopSection = document.getElementById('shop');
+if (shopSection) {
+    shopSection.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
 
-            const productCard = btn.closest('.bg-[#111111]');
-            if (!productCard) return;
+        const productCard = btn.closest('.bg-[#111111]');
+        const productName = productCard.querySelector('h3').innerText.trim();
+        const productImg = productCard.querySelector('img').getAttribute('src');
+        const counterDisplay = productCard.querySelector('span.text-white.w-6');
+        const minusBtn = productCard.querySelector('button:has(.lucide-minus)');
 
-            const productName = productCard.querySelector('h3').innerText.trim();
-            const productImg = productCard.querySelector('img').getAttribute('src');
+        let item = cart.find(i => i.name === productName);
 
-            // Lógica de suma (Si dice "Agregar" o tiene el icono PLUS)
-            if (btn.innerText.includes('Agregar') || btn.querySelector('.lucide-plus') || btn.classList.contains('bg-[#D2C18D]')) {
-                const existingItem = cart.find(item => item.name === productName);
-                if (existingItem) {
-                    existingItem.quantity++;
-                } else {
-                    cart.push({ name: productName, img: productImg, quantity: 1 });
-                }
-            } 
-            // Lógica de resta (Si tiene el icono MINUS)
-            else if (btn.querySelector('.lucide-minus')) {
-                const index = cart.findIndex(item => item.name === productName);
-                if (index !== -1) {
-                    cart[index].quantity--;
-                    if (cart[index].quantity === 0) cart.splice(index, 1);
+        // BOTÓN SUMAR (Agregar o +)
+        if (btn.innerText.includes('Agregar') || btn.querySelector('.lucide-plus')) {
+            if (item) {
+                item.quantity++;
+            } else {
+                item = { name: productName, img: productImg, quantity: 1 };
+                cart.push(item);
+            }
+            // Al sumar, habilitamos el botón de menos de este producto
+            if (minusBtn) minusBtn.disabled = false;
+        } 
+        
+        // BOTÓN RESTAR (-)
+        else if (btn.querySelector('.lucide-minus')) {
+            if (item && item.quantity > 0) {
+                item.quantity--;
+                if (item.quantity === 0) {
+                    cart = cart.filter(i => i.name !== productName);
+                    btn.disabled = true; // Lo bloqueamos si llegó a cero
                 }
             }
-            updateCartUI();
-        });
-    }
+        }
 
-    // Botón de WhatsApp y Vaciar Carrito (asegurate que los IDs existan)
-    document.getElementById('whatsapp-order')?.addEventListener('click', () => {
-        let message = "¡Hola Atletic! 👋 Quiero realizar el siguiente pedido:\n\n";
-        cart.forEach(item => message += `• ${item.name} (x${item.quantity})\n`);
-        message += "\n¿Tienen disponibilidad?";
-        window.open(`https://wa.me/5491123947976?text=${encodeURIComponent(message)}`, '_blank');
-    });
-
-    document.getElementById('clear-cart')?.addEventListener('click', () => {
-        cart = [];
+        // Actualizar el numerito visual en la tarjeta del producto
+        if (counterDisplay) {
+            counterDisplay.innerText = item ? item.quantity : "0";
+        }
+        
         updateCartUI();
     });
+}
+
+// Botón de WhatsApp
+document.getElementById('whatsapp-order')?.addEventListener('click', () => {
+    let msg = "¡Hola Atletic! 👋 Quiero realizar el siguiente pedido:\n\n";
+    cart.forEach(i => msg += `• ${i.name} (x${i.quantity})\n`);
+    msg += "\n¿Tienen disponibilidad?";
+    window.open(`https://wa.me/5491123947976?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+// Botón de Vaciar
+document.getElementById('clear-cart')?.addEventListener('click', () => {
+    cart = [];
+    updateCartUI();
+});
    
 });
