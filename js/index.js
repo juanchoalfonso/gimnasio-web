@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', handleScroll);
 
-
+    /*
     // --- 2. ANIMACIÓN DE APARICIÓN (FADE-IN) ---
     // Esto busca todos los elementos que tengan opacity: 0 y los hace aparecer suavemente
     
@@ -42,7 +42,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Seleccionamos los elementos que queremos animar
     // (Asegurate de que en tu HTML estos divs tengan style="opacity: 0;")
     const hiddenElements = document.querySelectorAll('[style*="opacity: 0"]');
-    hiddenElements.forEach((el) => observer.observe(el));
+    hiddenElements.forEach((el) => observer.observe(el));*/
+
+    // --- 2. ANIMACIÓN DE APARICIÓN PREMIUM (CON DELAY) ---
+    const observerOptions = {
+        threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                // Busca el delay en el HTML. Si no hay, usa 0 segundos.
+                const delay = el.getAttribute('data-delay') || '0s';
+
+                // Aplicamos la animación usando el delay del HTML
+                el.style.transition = `all 1.2s ease-out ${delay}`;
+                el.style.opacity = "1";
+                el.style.transform = "translateY(0)";
+                
+                observer.unobserve(el); 
+            }
+        });
+    }, observerOptions);
+
+    // Activamos el observador para todo lo que tenga opacity: 0 en el style
+    document.querySelectorAll('[style*="opacity: 0"]').forEach((el) => observer.observe(el));
 
 
     // --- 3. BOTÓN DE MENÚ (MOBILE) ---
