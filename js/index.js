@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- 1. NAVBAR QUE SE PONE NEGRO AL BAJAR ---
     const navbar = document.querySelector('nav');
-    
+
     function handleScroll() {
         if (window.scrollY > 50) {
             // Estado scrolleado: Fondo Negro sólido y un poco de sombra
             navbar.classList.remove('bg-transparent', 'py-6');
-            navbar.classList.add('bg-[#0A0A0A]', 'shadow-lg', 'py-4'); 
+            navbar.classList.add('bg-[#0A0A0A]', 'shadow-lg', 'py-4');
         } else {
             // Estado inicial: Transparente y más espaciado
             navbar.classList.add('bg-transparent', 'py-6');
             navbar.classList.remove('bg-[#0A0A0A]', 'shadow-lg', 'py-4');
         }
     }
-    
+
     window.addEventListener('scroll', handleScroll);
 
     /*
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 2. ANIMACIÓN DE APARICIÓN PREMIUM (CON DELAY) ---
     const observerOptions = {
-        threshold: 0.1 
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.style.transition = `all 1.2s ease-out ${delay}`;
                 el.style.opacity = "1";
                 el.style.transform = "translateY(0)";
-                
-                observer.unobserve(el); 
+
+                observer.unobserve(el);
             }
         });
     }, observerOptions);
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. BOTÓN DE MENÚ (MOBILE) ---
     const menuBtn = document.querySelector('button.md\\:hidden');
-    
+
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
             console.log("Menú clickeado - Aquí iría la lógica para abrir el menú");
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollArrows.forEach(icon => {
         // Encontramos el contenedor clickeable (el padre que tiene cursor-pointer)
         const button = icon.closest('.cursor-pointer');
-        
+
         if (button) {
             button.addEventListener('click', () => {
                 // Truco: Buscamos la sección "padre" donde está la flecha
                 const currentSection = button.closest('section');
-                
+
                 // Y buscamos la sección que le sigue (hermano siguiente)
                 const nextSection = currentSection.nextElementSibling;
 
@@ -106,13 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-   // --- 5. NAVEGACIÓN DEL MENÚ (SCROLL A SECCIONES) ---
+    // --- 5. NAVEGACIÓN DEL MENÚ (SCROLL A SECCIONES) ---
     const navButtons = document.querySelectorAll('nav button');
 
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const sectionText = button.textContent.toLowerCase().trim();
-            
+
             // Si el botón dice "Inicio" o es el logo "Atletic", sube al inicio
             if (sectionText === 'inicio' || sectionText === 'atletic') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
