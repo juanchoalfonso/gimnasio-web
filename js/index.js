@@ -55,4 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("¡Botón de menú funcionando!");
         });
     }
+
+    // --- 4. LÓGICA DE LAS FLECHITAS (SCROLL DOWN) ---
+    // Buscamos todos los elementos que tengan el ícono de la flecha hacia abajo
+    const scrollArrows = document.querySelectorAll('.lucide-chevron-down');
+
+    scrollArrows.forEach(icon => {
+        // Encontramos el contenedor clickeable (el padre que tiene cursor-pointer)
+        const button = icon.closest('.cursor-pointer');
+        
+        if (button) {
+            button.addEventListener('click', () => {
+                // Truco: Buscamos la sección "padre" donde está la flecha
+                const currentSection = button.closest('section');
+                
+                // Y buscamos la sección que le sigue (hermano siguiente)
+                const nextSection = currentSection.nextElementSibling;
+
+                if (nextSection) {
+                    // Hacemos scroll suave hasta la próxima sección
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    });
 });
