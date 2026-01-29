@@ -203,7 +203,7 @@ document.addEventListener('click', (e) => {
 // --- 7. ACCIONES DEL CARRITO (WHATSAPP Y VACIAR) ---
 document.getElementById('whatsapp-order')?.addEventListener('click', () => {
     // El encabezado que pediste
-    let message = "Hola Atletic Fitt! Me gustaría hacer el siguiente pedido:\n\n";
+    let message = "Hola Atletic SHOP! Me gustaría hacer el siguiente pedido:\n\n";
     
     // Lista de productos con emojis para que quede prolijo
     cart.forEach(item => {
@@ -213,7 +213,7 @@ document.getElementById('whatsapp-order')?.addEventListener('click', () => {
     message += "\nMuchas gracias. ¿Me confirman disponibilidad?";
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/5491123947976?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/5491172386506?text=${encodedMessage}`, '_blank');
 });
 
 document.getElementById('clear-cart')?.addEventListener('click', () => {
