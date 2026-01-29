@@ -28,7 +28,8 @@
   <link href="https://www.atleticfitt.com.ar/" rel="canonical">
 </head>
 
-<body>
+<body class="bg-black text-white font-sans antialiased overflow-x-hidden">
+  <div class="w-full overflow-x-hidden relative">
 
   <!-- -------------------------------------------------------  TOP BANNER ----------------------------------------------------------------->
   <div id="root">
@@ -40,11 +41,12 @@
             <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Inicio</button>
             <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Historia</button>
             <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Equipo</button>
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Actividades</button>
+            <button
+              class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Actividades</button>
             <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Planes</button>
             <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Horarios</button>
             <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Shop</button>
-            <a href="https://wa.me/5491123947976?text=Hola! Quiero reservar una clase en Atletic" target="_blank"
+            <a href="https://atleticlujan.misactividades.com/" target="_blank"
               rel="noopener noreferrer"
               class="px-5 py-2.5 border border-[#D4AF37] text-[#D4AF37] font-semibold text-sm hover:bg-[#D4AF37] hover:text-black transition-all">RESERVAR
               CLASE</a>
@@ -62,6 +64,17 @@
             </svg>
           </button>
         </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#0A0A0A] border-t border-b border-white/10 shadow-2xl z-50">
+          <div class="flex flex-col p-6 space-y-4">
+              <a href="#" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Inicio</a>
+              <a href="#historia" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Historia</a>
+              <a href="#equipo" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Equipo</a>
+              <a href="#actividades" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Actividades</a>
+              <a href="#planes" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Planes</a>
+              <a href="#horarios" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Horarios</a>
+              <a href="#shop" class="menu-link text-[#D2C18D] font-bold text-lg border-b border-white/5 pb-2">Shop</a>
+          </div>
+      </div>
       </nav>
       <main>
         <div class="bg-[#0A0A0A] min-h-screen">
@@ -100,7 +113,6 @@
               </div>
             </div>
             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer" style="opacity: 0;">
-              <!-- <div style="transform: translateY(8.5699px);"> -->
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -601,167 +613,98 @@
 
           <section id="actividades" class="py-24 md:py-32 bg-[#080808]">
             <div class="max-w-7xl mx-auto px-6">
-              <div class="text-center mb-16" style="opacity: 0; transform: translateY(40px);">
+              
+              <div class="text-center mb-16">
                 <span class="text-[#D2C18D] text-sm tracking-[0.3em] uppercase mb-4 block">Actividades</span>
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Encontrá tu forma de <span
-                    class="text-[#D2C18D]">entrenar</span>
-                </h2>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Encontrá tu forma de <span class="text-[#D2C18D]">entrenar</span></h2>
                 <div class="w-16 h-[2px] bg-[#D2C18D] mx-auto mb-8"></div>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Ofrecemos una amplia variedad de actividades pensadas
-                  para cada tipo de persona y objetivo.</p>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Ofrecemos una amplia variedad de actividades pensadas para cada tipo de persona y objetivo.</p>
               </div>
+          
               <div class="grid lg:grid-cols-12 gap-8">
-                <div class="lg:col-span-4">
-                  <div class="space-y-3">
-                    <button data-activity="musculacion"
-                      class="w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#D2C18D] text-black"
-                      style="opacity: 0; transform: translateX(-30px);">
-                      <div class="flex items-center gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                          class="lucide lucide-dumbbell w-6 h-6 text-black">
-                          <path d="M14.4 14.4 9.6 9.6"></path>
-                          <path
-                            d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z">
-                          </path>
-                          <path d="m21.5 21.5-1.4-1.4"></path>
-                          <path d="M3.9 3.9 2.5 2.5"></path>
-                          <path
-                            d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z">
-                          </path>
-                        </svg>
-                        <div>
-                          <h3 class="font-semibold">Musculación</h3>
-                          <p class="text-sm text-black/70">Fuerza y control</p>
-                        </div>
-                      </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right w-5 h-5 transition-transform translate-x-1">
-                        <path d="m9 18 6-6-6-6"></path>
-                      </svg>
-                    </button>
-                    <button data-activity="funcional"
-                      class="w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5"
-                      style="opacity: 0; transform: translateX(-30px);">
-                      <div class="flex items-center gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                          class="lucide lucide-zap w-6 h-6 text-[#D2C18D]">
-                          <path
-                            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
-                          </path>
-                        </svg>
-                        <div>
-                          <h3 class="font-semibold">Funcional</h3>
-                          <p class="text-sm text-gray-500">Entrenamiento integral</p>
-                        </div>
-                      </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right w-5 h-5 transition-transform">
-                        <path d="m9 18 6-6-6-6"></path>
-                      </svg>
-                    </button>
-                    <button data-activity="cross"
-                      class="w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5"
-                      style="opacity: 0; transform: translateX(-30px);">
-                      <div class="flex items-center gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                          class="lucide lucide-flame w-6 h-6 text-[#D2C18D]">
-                          <path
-                            d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
-                          </path>
-                        </svg>
-                        <div>
-                          <h3 class="font-semibold">Cross</h3>
-                          <p class="text-sm text-gray-500">Alta intensidad</p>
-                        </div>
-                      </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right w-5 h-5 transition-transform">
-                        <path d="m9 18 6-6-6-6"></path>
-                      </svg>
-                    </button>
-                    <button data-activity="gap"
-                      class="w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5"
-                      style="opacity: 0; transform: translateX(-30px);">
-                      <div class="flex items-center gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                          class="lucide lucide-target w-6 h-6 text-[#D2C18D]">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <circle cx="12" cy="12" r="6"></circle>
-                          <circle cx="12" cy="12" r="2"></circle>
-                        </svg>
-                        <div>
-                          <h3 class="font-semibold">GAP</h3>
-                          <p class="text-sm text-gray-500">Glúteos, abdomen y piernas</p>
-                        </div>
-                      </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right w-5 h-5 transition-transform">
-                        <path d="m9 18 6-6-6-6"></path>
-                      </svg>
-                    </button>
-                    <button data-activity="calistenia"
-                      class="w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5"
-                      style="opacity: 0; transform: translateX(-30px);">
-                      <div class="flex items-center gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                          class="lucide lucide-person-standing w-6 h-6 text-[#D2C18D]">
-                          <circle cx="12" cy="5" r="1"></circle>
-                          <path d="m9 20 3-6 3 6"></path>
-                          <path d="m6 8 6 2 6-2"></path>
-                          <path d="M12 10v4"></path>
-                        </svg>
-                        <div>
-                          <h3 class="font-semibold">Calistenia</h3>
-                          <p class="text-sm text-gray-500">Peso corporal</p>
-                        </div>
-                      </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right w-5 h-5 transition-transform">
-                        <path d="m9 18 6-6-6-6"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="lg:col-span-8">
-                  <div class="relative h-full min-h-[500px]" style="opacity: 0; transform: none;">
-                    <div class="relative h-full overflow-hidden">
-                      <img src="assets/overview4.jpeg" alt="Musculación"
-                        class="w-full h-full object-cover absolute inset-0">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-                      <div class="absolute bottom-0 left-0 right-0 p-8">
-                        <div class="flex items-center gap-3 mb-4">
-                          <div id="activity-icon-container" class="mb-4">
-                          </div>
-                          <h3 class="text-3xl font-bold text-white">Musculación</h3>
-                        </div>
-                        <p class="text-gray-300 text-lg mb-6 max-w-xl">Entrenamiento planificado, con acompañamiento
-                          profesional y máquinas propias. Ideal para ganar fuerza, mejorar tu físico y entrenar con
-                          criterio.</p>
-                        <div class="flex flex-wrap gap-3">
-                          <span
-                            class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">Máquinas
-                            propias</span>
-                          <span
-                            class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">Entrenamiento
-                            planificado</span>
-                          <span
-                            class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20">Seguimiento
-                            profesional</span>
-                        </div>
+                
+                <div class="lg:col-span-4 space-y-3">
+                  
+                  <button onclick="changeActivity('musculacion')" class="activity-btn w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#D2C18D] text-black border border-white/5" data-id="musculacion">
+                    <div class="flex items-center gap-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dumbbell w-6 h-6"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg>
+                      <div>
+                        <h3 class="font-semibold">Musculación</h3>
+                        <p class="text-sm opacity-70">Fuerza y control</p>
                       </div>
                     </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+          
+                  <button onclick="changeActivity('funcional')" class="activity-btn w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5" data-id="funcional">
+                    <div class="flex items-center gap-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-6 h-6 text-[#D2C18D]"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                      <div>
+                        <h3 class="font-semibold">Funcional</h3>
+                        <p class="text-sm opacity-70">Entrenamiento integral</p>
+                      </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+          
+                  <button onclick="changeActivity('cross')" class="activity-btn w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5" data-id="cross">
+                    <div class="flex items-center gap-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame w-6 h-6 text-[#D2C18D]"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                      <div>
+                        <h3 class="font-semibold">Cross</h3>
+                        <p class="text-sm opacity-70">Alta intensidad</p>
+                      </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+          
+                  <button onclick="changeActivity('gap')" class="activity-btn w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5" data-id="gap">
+                    <div class="flex items-center gap-4">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target w-6 h-6 text-[#D2C18D]"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                      <div>
+                        <h3 class="font-semibold">GAP</h3>
+                        <p class="text-sm opacity-70">Glúteos, abdomen y piernas</p>
+                      </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+          
+                  <button onclick="changeActivity('calistenia')" class="activity-btn w-full text-left p-5 transition-all duration-300 group flex items-center justify-between bg-[#111111] text-white hover:bg-[#1a1a1a] border border-white/5" data-id="calistenia">
+                    <div class="flex items-center gap-4">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-person-standing w-6 h-6 text-[#D2C18D]"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>
+                      <div>
+                        <h3 class="font-semibold">Calistenia</h3>
+                        <p class="text-sm opacity-70">Peso corporal</p>
+                      </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+          
+                </div>
+          
+                <div class="lg:col-span-8" id="activity-display-area">
+                  <div class="relative h-full min-h-[500px] rounded-2xl overflow-hidden group">
+                      
+                      <img id="activity-img" src="assets/overview4.jpeg" alt="Musculación" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-500">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                      
+                      <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <h3 id="activity-title" class="text-3xl font-bold text-white mb-4">Musculación</h3>
+                        
+                        <p id="activity-desc" class="text-gray-300 text-lg mb-6 max-w-xl">
+                          Entrenamiento planificado, con acompañamiento profesional y máquinas propias. Ideal para ganar fuerza, mejorar tu físico y entrenar con criterio.
+                        </p>
+                        
+                        <div id="activity-tags" class="flex flex-wrap gap-3">
+                          <span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20 rounded-full">Máquinas propias</span>
+                          <span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20 rounded-full">Entrenamiento planificado</span>
+                          <span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20 rounded-full">Seguimiento profesional</span>
+                        </div>
+                      </div>
+          
                   </div>
                 </div>
+          
               </div>
             </div>
           </section>
@@ -1362,7 +1305,7 @@
 
                   <div class="bg-[#111111] border border-white/10 overflow-hidden group">
                     <div class="relative aspect-square overflow-hidden">
-                      <img src="assets/remera_azul.jpg" alt="Buzo"
+                      <img src="assets/remera_azul.jpeg" alt="Buzo"
                         class="w-full h-full object-cover group-hover:scale-105 transition-all">
                     </div>
                     <div class="p-4">
@@ -1393,459 +1336,522 @@
                     </div>
                   </div>
 
-                
 
+
+                </div>
               </div>
-            </div>
 
-                  <div class="mt-24">
-                    <h3 class="text-xl font-semibold text-white mb-6 pb-2 border-b border-white/10">🧴 Accesorios</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    
-                      <div class="bg-[#111111] border border-white/10 overflow-hidden group">
-                        <div class="relative aspect-square overflow-hidden">
-                          <img src="assets/botellas.jpeg" alt="Buzo"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-all">
+              <div class="mt-24">
+                <h3 class="text-xl font-semibold text-white mb-6 pb-2 border-b border-white/10">🧴 Accesorios</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                  <div class="bg-[#111111] border border-white/10 overflow-hidden group">
+                    <div class="relative aspect-square overflow-hidden">
+                      <img src="assets/botellas.jpeg" alt="Buzo"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-all">
+                    </div>
+                    <div class="p-4">
+                      <h3 class="text-white font-medium text-sm mb-3 min-h-[40px]">Botella de Aluminio Tryfit</h3>
+                      <div class="flex items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                          <button disabled
+                            class="w-8 h-8 flex items-center justify-center bg-[#1a1a1a] text-white border border-white/10 hover:border-[#D2C18D] disabled:opacity-30 disabled:cursor-not-allowed transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-minus w-4 h-4">
+                              <path d="M5 12h14" />
+                            </svg>
+                          </button>
+                          <span class="text-white w-6 text-center font-medium">0</span>
+                          <button
+                            class="w-8 h-8 flex items-center justify-center bg-[#D2C18D] text-black hover:bg-[#E5C04B] transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-plus w-4 h-4">
+                              <path d="M5 12h14" />
+                              <path d="M12 5v14" />
+                            </svg>
+                          </button>
                         </div>
-                        <div class="p-4">
-                          <h3 class="text-white font-medium text-sm mb-3 min-h-[40px]">Botella de Aluminio Tryfit</h3>
-                          <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2">
-                              <button disabled
-                                class="w-8 h-8 flex items-center justify-center bg-[#1a1a1a] text-white border border-white/10 hover:border-[#D2C18D] disabled:opacity-30 disabled:cursor-not-allowed transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                  stroke-linejoin="round" class="lucide lucide-minus w-4 h-4">
-                                  <path d="M5 12h14" />
-                                </svg>
-                              </button>
-                              <span class="text-white w-6 text-center font-medium">0</span>
-                              <button
-                                class="w-8 h-8 flex items-center justify-center bg-[#D2C18D] text-black hover:bg-[#E5C04B] transition-all">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                  stroke-linejoin="round" class="lucide lucide-plus w-4 h-4">
-                                  <path d="M5 12h14" />
-                                  <path d="M12 5v14" />
-                                </svg>
-                              </button>
-                            </div>
-                            <button class="text-xs text-[#D2C18D] hover:underline">Agregar</button>
-                          </div>
-                        </div>
+                        <button class="text-xs text-[#D2C18D] hover:underline">Agregar</button>
                       </div>
                     </div>
-
+                  </div>
                 </div>
+
               </div>
             </div>
         </div>
-        </section>
+    </div>
+    </section>
 
-        <!-- ------------------------------------------------------- //SHOP ----------------------------------------------------------------->
+    <!-- ------------------------------------------------------- //SHOP ----------------------------------------------------------------->
 
-        <!-- ------------------------------------------------------- PLANES ----------------------------------------------------------------->
+    <!-- ------------------------------------------------------- PLANES ----------------------------------------------------------------->
 
-        <section id="planes" class="py-24 bg-[#0A0A0A] relative overflow-hidden">
-          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none opacity-20">
-            <div class="absolute top-[20%] right-0 w-96 h-96 bg-[#D2C18D] rounded-full blur-[120px]"></div>
+    <section id="planes" class="py-24 bg-[#0A0A0A] relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none opacity-20">
+        <div class="absolute top-[20%] right-0 w-96 h-96 bg-[#D2C18D] rounded-full blur-[120px]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+        <div class="text-center mb-16">
+          <span class="text-[#D2C18D] text-sm tracking-[0.3em] uppercase mb-4 block">Membresías</span>
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">PLANES & <span
+              class="text-[#D2C18D]">PRECIOS</span></h2>
+          <div class="w-16 h-[2px] bg-[#D2C18D] mx-auto mb-8"></div>
+          <p class="text-gray-400 text-lg">Inscripción única: <span class="text-white font-semibold">$5.000</span> (solo
+            al iniciar)</p>
+        </div>
+
+        <div class="mb-20">
+          <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+            <span class="w-2 h-8 bg-[#D2C18D] rounded-full"></span>
+            Planes Mensuales
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div
+              class="bg-[#111111] border border-white/10 p-8 flex flex-col hover:border-[#D2C18D]/50 transition-colors group">
+              <h4 class="text-xl font-semibold text-white mb-2">Pase por Día</h4>
+              <p class="text-gray-500 text-sm mb-6 h-10">Acceso individual para probar nuestras instalaciones.</p>
+              <div class="text-4xl font-bold text-[#D2C18D] mb-6">$5.000<span
+                  class="text-base font-normal text-gray-500">/día</span></div>
+              <a href="https://wa.me/5491123947976?text=Hola! Quiero ir a entrenar con el Pase Diario de $5.000"
+                target="_blank"
+                class="mt-auto block w-full py-3 text-center border border-white/20 text-white font-medium hover:bg-white hover:text-black transition-all">
+                IR HOY
+              </a>
+            </div>
+
+            <div
+              class="bg-[#111111] border border-white/10 p-8 flex flex-col hover:border-[#D2C18D]/50 transition-colors group">
+              <h4 class="text-xl font-semibold text-white mb-2">Plan Clases</h4>
+              <p class="text-gray-500 text-sm mb-6 h-10">Entrenamientos grupales ilimitados.</p>
+              <div class="text-4xl font-bold text-[#D2C18D] mb-6">$43.000<span
+                  class="text-base font-normal text-gray-500">/mes</span></div>
+              <ul class="space-y-3 mb-8 text-gray-400 text-sm flex-grow">
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Open Box</li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Funcional & GAP</li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Cross Training</li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Pase libre a clases</li>
+              </ul>
+              <a href="https://wa.me/5491123947976?text=Hola! Me interesa inscribirme al Plan Clases de $43.000"
+                target="_blank"
+                class="block w-full py-3 text-center bg-[#1a1a1a] text-white font-medium hover:bg-[#D2C18D] hover:text-black transition-all">
+                ELEGIR PLAN
+              </a>
+            </div>
+
+            <div
+              class="bg-[#111111] border border-white/10 p-8 flex flex-col hover:border-[#D2C18D]/50 transition-colors group">
+              <h4 class="text-xl font-semibold text-white mb-2">Musculación</h4>
+              <p class="text-gray-500 text-sm mb-6 h-10">Para tu entrenamiento de fuerza tradicional.</p>
+              <div class="text-4xl font-bold text-[#D2C18D] mb-6">$48.000<span
+                  class="text-base font-normal text-gray-500">/mes</span></div>
+              <ul class="space-y-3 mb-8 text-gray-400 text-sm flex-grow">
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Sala de pesas completa</li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Rutinas semi personalizadas
+                </li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Entrenamientos ilimitados</li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Seguimiento de profes</li>
+              </ul>
+              <a href="https://wa.me/5491123947976?text=Hola! Me interesa inscribirme al Plan Musculación de $48.000"
+                target="_blank"
+                class="block w-full py-3 text-center bg-[#1a1a1a] text-white font-medium hover:bg-[#D2C18D] hover:text-black transition-all">
+                ELEGIR PLAN
+              </a>
+            </div>
+
+            <div
+              class="bg-[#111111] border border-[#D2C18D] relative p-8 flex flex-col transform md:-translate-y-4 shadow-2xl shadow-[#D2C18D]/10">
+              <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#D2C18D] text-black text-xs font-bold px-4 py-1 tracking-widest uppercase">
+                Recomendado</div>
+              <h4 class="text-xl font-semibold text-white mb-2 mt-2">Plan Full</h4>
+              <p class="text-gray-400 text-sm mb-6 h-10">La experiencia completa sin restricciones.</p>
+              <div class="text-4xl font-bold text-white mb-6">$53.000<span
+                  class="text-base font-normal text-gray-500">/mes</span></div>
+              <ul class="space-y-3 mb-8 text-gray-300 text-sm flex-grow">
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">★</span> <strong>Clases +
+                    Musculación</strong></li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Acceso total a todo</li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Sin restricciones</li>
+                <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Rutinas incluidas</li>
+              </ul>
+              <a href="https://wa.me/5491123947976?text=Hola! Quiero empezar con TODO. Me interesa el Plan Full de $53.000"
+                target="_blank"
+                class="block w-full py-3 text-center bg-[#D2C18D] text-black font-bold hover:bg-[#E5C04B] transition-all">
+                QUIERO ESTE
+              </a>
+            </div>
+
           </div>
-        
-          <div class="max-w-7xl mx-auto px-6 relative z-10">
-            
-            <div class="text-center mb-16">
-              <span class="text-[#D2C18D] text-sm tracking-[0.3em] uppercase mb-4 block">Membresías</span>
-              <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">PLANES & <span class="text-[#D2C18D]">PRECIOS</span></h2>
-              <div class="w-16 h-[2px] bg-[#D2C18D] mx-auto mb-8"></div>
-              <p class="text-gray-400 text-lg">Inscripción única: <span class="text-white font-semibold">$5.000</span> (solo al iniciar)</p>
-            </div>
-        
-            <div class="mb-20">
-              <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <span class="w-2 h-8 bg-[#D2C18D] rounded-full"></span>
-                Planes Mensuales
-              </h3>
-              
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="bg-[#111111] border border-white/10 p-8 flex flex-col hover:border-[#D2C18D]/50 transition-colors group">
-                  <h4 class="text-xl font-semibold text-white mb-2">Pase por Día</h4>
-                  <p class="text-gray-500 text-sm mb-6 h-10">Acceso individual para probar nuestras instalaciones.</p>
-                  <div class="text-4xl font-bold text-[#D2C18D] mb-6">$5.000<span class="text-base font-normal text-gray-500">/día</span></div>
-                  <a href="https://wa.me/5491123947976?text=Hola! Quiero ir a entrenar con el Pase Diario de $5.000" target="_blank" class="mt-auto block w-full py-3 text-center border border-white/20 text-white font-medium hover:bg-white hover:text-black transition-all">
-                    IR HOY
-                  </a>
-                </div>
-        
-                <div class="bg-[#111111] border border-white/10 p-8 flex flex-col hover:border-[#D2C18D]/50 transition-colors group">
-                  <h4 class="text-xl font-semibold text-white mb-2">Plan Clases</h4>
-                  <p class="text-gray-500 text-sm mb-6 h-10">Entrenamientos grupales ilimitados.</p>
-                  <div class="text-4xl font-bold text-[#D2C18D] mb-6">$43.000<span class="text-base font-normal text-gray-500">/mes</span></div>
-                  <ul class="space-y-3 mb-8 text-gray-400 text-sm flex-grow">
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Open Box</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Funcional & GAP</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Cross Training</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Pase libre a clases</li>
-                  </ul>
-                  <a href="https://wa.me/5491123947976?text=Hola! Me interesa inscribirme al Plan Clases de $43.000" target="_blank" class="block w-full py-3 text-center bg-[#1a1a1a] text-white font-medium hover:bg-[#D2C18D] hover:text-black transition-all">
-                    ELEGIR PLAN
-                  </a>
-                </div>
-        
-                <div class="bg-[#111111] border border-white/10 p-8 flex flex-col hover:border-[#D2C18D]/50 transition-colors group">
-                  <h4 class="text-xl font-semibold text-white mb-2">Musculación</h4>
-                  <p class="text-gray-500 text-sm mb-6 h-10">Para tu entrenamiento de fuerza tradicional.</p>
-                  <div class="text-4xl font-bold text-[#D2C18D] mb-6">$48.000<span class="text-base font-normal text-gray-500">/mes</span></div>
-                  <ul class="space-y-3 mb-8 text-gray-400 text-sm flex-grow">
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Sala de pesas completa</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Rutinas semi personalizadas</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Entrenamientos ilimitados</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Seguimiento de profes</li>
-                  </ul>
-                  <a href="https://wa.me/5491123947976?text=Hola! Me interesa inscribirme al Plan Musculación de $48.000" target="_blank" class="block w-full py-3 text-center bg-[#1a1a1a] text-white font-medium hover:bg-[#D2C18D] hover:text-black transition-all">
-                    ELEGIR PLAN
-                  </a>
-                </div>
-        
-                <div class="bg-[#111111] border border-[#D2C18D] relative p-8 flex flex-col transform md:-translate-y-4 shadow-2xl shadow-[#D2C18D]/10">
-                  <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#D2C18D] text-black text-xs font-bold px-4 py-1 tracking-widest uppercase">Recomendado</div>
-                  <h4 class="text-xl font-semibold text-white mb-2 mt-2">Plan Full</h4>
-                  <p class="text-gray-400 text-sm mb-6 h-10">La experiencia completa sin restricciones.</p>
-                  <div class="text-4xl font-bold text-white mb-6">$53.000<span class="text-base font-normal text-gray-500">/mes</span></div>
-                  <ul class="space-y-3 mb-8 text-gray-300 text-sm flex-grow">
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">★</span> <strong>Clases + Musculación</strong></li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Acceso total a todo</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Sin restricciones</li>
-                    <li class="flex items-start gap-2"><span class="text-[#D2C18D]">✓</span> Rutinas incluidas</li>
-                  </ul>
-                  <a href="https://wa.me/5491123947976?text=Hola! Quiero empezar con TODO. Me interesa el Plan Full de $53.000" target="_blank" class="block w-full py-3 text-center bg-[#D2C18D] text-black font-bold hover:bg-[#E5C04B] transition-all">
-                    QUIERO ESTE
-                  </a>
-                </div>
-        
-              </div>
-            </div>
-        
-            <div class="bg-[#111111]/50 border border-white/5 rounded-2xl p-8 md:p-12 mt-16">
+        </div>
 
-              <div class="mb-10">
-                <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                    <span class="w-2 h-8 bg-[#D2C18D] rounded-full"></span>
-                    Planes Trimestrales
-                </h3>
-                <p class="text-gray-400 max-w-3xl pl-5 md:pl-0">Ahorrá más comprometiéndote con tu entrenamiento. Los planes trimestrales te dan la mejor relación precio-valor para que te enfoques en tus resultados sin preocuparte por renovaciones mensuales.</p>
+        <div class="bg-[#111111]/50 border border-white/5 rounded-2xl p-8 md:p-12 mt-16">
+
+          <div class="mb-10">
+            <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+              <span class="w-2 h-8 bg-[#D2C18D] rounded-full"></span>
+              Planes Trimestrales
+            </h3>
+            <p class="text-gray-400 max-w-3xl pl-5 md:pl-0">Ahorrá más comprometiéndote con tu entrenamiento. Los planes
+              trimestrales te dan la mejor relación precio-valor para que te enfoques en tus resultados sin preocuparte
+              por renovaciones mensuales.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div class="bg-[#0A0A0A] border border-white/10 p-6 rounded-xl hover:border-[#D2C18D]/30 transition-all">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h4 class="text-white font-semibold">Trimestral Clases</h4>
+                  <p class="text-[#D2C18D] text-xs uppercase tracking-wider">Ahorro Inteligente</p>
+                </div>
+                <div class="text-2xl font-bold text-white">$115.000</div>
               </div>
-        
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <div class="bg-[#0A0A0A] border border-white/10 p-6 rounded-xl hover:border-[#D2C18D]/30 transition-all">
-                  <div class="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 class="text-white font-semibold">Trimestral Clases</h4>
-                      <p class="text-[#D2C18D] text-xs uppercase tracking-wider">Ahorro Inteligente</p>
-                    </div>
-                    <div class="text-2xl font-bold text-white">$115.000</div>
-                  </div>
-                  <p class="text-gray-500 text-sm mb-6">3 meses de acceso a todas las clases grupales.</p>
-                  <a href="https://wa.me/5491123947976?text=Hola! Me interesa el Pack Trimestral de Clases ($115.000)" target="_blank" class="text-sm text-white border-b border-[#D2C18D] pb-1 hover:text-[#D2C18D] transition-colors">Solicitar pack &rarr;</a>
+              <p class="text-gray-500 text-sm mb-6">3 meses de acceso a todas las clases grupales.</p>
+              <a href="https://wa.me/5491123947976?text=Hola! Me interesa el Pack Trimestral de Clases ($115.000)"
+                target="_blank"
+                class="text-sm text-white border-b border-[#D2C18D] pb-1 hover:text-[#D2C18D] transition-colors">Solicitar
+                pack &rarr;</a>
+            </div>
+
+            <div class="bg-[#0A0A0A] border border-white/10 p-6 rounded-xl hover:border-[#D2C18D]/30 transition-all">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h4 class="text-white font-semibold">Trimestral Pesas</h4>
+                  <p class="text-[#D2C18D] text-xs uppercase tracking-wider">Enfocado</p>
                 </div>
-        
-                <div class="bg-[#0A0A0A] border border-white/10 p-6 rounded-xl hover:border-[#D2C18D]/30 transition-all">
-                  <div class="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 class="text-white font-semibold">Trimestral Pesas</h4>
-                      <p class="text-[#D2C18D] text-xs uppercase tracking-wider">Enfocado</p>
-                    </div>
-                    <div class="text-2xl font-bold text-white">$130.000</div>
-                  </div>
-                  <p class="text-gray-500 text-sm mb-6">3 meses de sala de pesas y rutinas.</p>
-                  <a href="https://wa.me/5491123947976?text=Hola! Me interesa el Pack Trimestral de Musculación ($130.000)" target="_blank" class="text-sm text-white border-b border-[#D2C18D] pb-1 hover:text-[#D2C18D] transition-colors">Solicitar pack &rarr;</a>
+                <div class="text-2xl font-bold text-white">$130.000</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-6">3 meses de sala de pesas y rutinas.</p>
+              <a href="https://wa.me/5491123947976?text=Hola! Me interesa el Pack Trimestral de Musculación ($130.000)"
+                target="_blank"
+                class="text-sm text-white border-b border-[#D2C18D] pb-1 hover:text-[#D2C18D] transition-colors">Solicitar
+                pack &rarr;</a>
+            </div>
+
+            <div
+              class="bg-[#0A0A0A] border border-white/10 p-6 rounded-xl hover:border-[#D2C18D]/30 transition-all relative overflow-hidden">
+              <div class="absolute -right-8 -top-8 bg-[#D2C18D]/5 w-24 h-24 rounded-full blur-xl"></div>
+              <div class="flex justify-between items-start mb-4 relative z-10">
+                <div>
+                  <h4 class="text-white font-semibold">Trimestral Full</h4>
+                  <p class="text-[#D2C18D] text-xs uppercase tracking-wider">Best Seller</p>
                 </div>
-        
-                <div class="bg-[#0A0A0A] border border-white/10 p-6 rounded-xl hover:border-[#D2C18D]/30 transition-all relative overflow-hidden">
-                  <div class="absolute -right-8 -top-8 bg-[#D2C18D]/5 w-24 h-24 rounded-full blur-xl"></div>
-                  <div class="flex justify-between items-start mb-4 relative z-10">
-                    <div>
-                      <h4 class="text-white font-semibold">Trimestral Full</h4>
-                      <p class="text-[#D2C18D] text-xs uppercase tracking-wider">Best Seller</p>
-                    </div>
-                    <div class="text-2xl font-bold text-[#D2C18D]">$140.000</div>
-                  </div>
-                  <p class="text-gray-500 text-sm mb-6">3 meses de acceso completo e ilimitado.</p>
-                  <a href="https://wa.me/5491123947976?text=Hola! Quiero aprovechar el Pack Trimestral FULL ($140.000)" target="_blank" class="text-sm text-white border-b border-[#D2C18D] pb-1 hover:text-[#D2C18D] transition-colors">Solicitar pack &rarr;</a>
-                </div>
-        
+                <div class="text-2xl font-bold text-[#D2C18D]">$140.000</div>
+              </div>
+              <p class="text-gray-500 text-sm mb-6">3 meses de acceso completo e ilimitado.</p>
+              <a href="https://wa.me/5491123947976?text=Hola! Quiero aprovechar el Pack Trimestral FULL ($140.000)"
+                target="_blank"
+                class="text-sm text-white border-b border-[#D2C18D] pb-1 hover:text-[#D2C18D] transition-colors">Solicitar
+                pack &rarr;</a>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="mt-16 relative group">
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-[#D2C18D]/0 via-[#D2C18D]/10 to-[#D2C18D]/0 blur-lg opacity-50 group-hover:opacity-100 transition duration-1000">
+          </div>
+
+          <div
+            class="relative bg-[#111111] border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left overflow-hidden">
+
+            <div class="flex flex-col md:flex-row items-center gap-6">
+              <img src="assets/wellhub_logo.png" alt="Wellhub Logo" class="w-32 md:w-40 h-auto object-contain">
+
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight">AHORA CONTAMOS CON <span
+                    class="text-[#D2C18D]">WELLHUB</span></h3>
+                <p class="text-gray-400 max-w-xl text-lg">Si tenés una suscripción activa, vení a entrenar con nosotros
+                  sin costo adicional.</p>
               </div>
             </div>
 
+            <div class="flex-shrink-0 relative z-10">
+              <div
+                class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white font-semibold tracking-wider hover:bg-[#D2C18D] hover:text-black hover:border-[#D2C18D] transition-all cursor-default">
+                <span>¡TE ESPERAMOS!</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
 
-            <div class="mt-16 relative group">
-              <div class="absolute -inset-1 bg-gradient-to-r from-[#D2C18D]/0 via-[#D2C18D]/10 to-[#D2C18D]/0 blur-lg opacity-50 group-hover:opacity-100 transition duration-1000"></div>
-              
-              <div class="relative bg-[#111111] border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left overflow-hidden">
-                
-                <div class="flex flex-col md:flex-row items-center gap-6">
-                  <img src="assets/wellhub_logo.png" alt="Wellhub Logo" class="w-32 md:w-40 h-auto object-contain">
-        
+          </div>
+        </div>
+
+    </section>
+
+    <!-- ------------------------------------------------------- //PLANES ----------------------------------------------------------------->
+
+    <!-- ------------------------------------------------------- HORARIOS ----------------------------------------------------------------->
+
+    <section id="horarios" class="py-24 bg-[#0A0A0A] relative overflow-hidden border-t border-white/5">
+
+      <div class="absolute top-0 left-0 w-full h-full max-w-7xl mx-auto pointer-events-none opacity-20 overflow-hidden">
+        <div class="absolute bottom-[10%] left-[-10%] w-96 h-96 bg-[#D2C18D] rounded-full blur-[120px]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+        <div class="text-center mb-16">
+          <span class="text-[#D2C18D] text-sm tracking-[0.3em] uppercase mb-4 block">Agenda Semanal</span>
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">NUESTROS <span
+              class="text-[#D2C18D]">HORARIOS</span></h2>
+          <div class="w-16 h-[2px] bg-[#D2C18D] mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <div
+            class="bg-[#111111] border border-white/10 p-8 flex flex-col justify-center relative overflow-hidden group">
+            <div
+              class="absolute inset-0 bg-[#D2C18D]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-2 relative z-10">Sala de Musculación</h3>
+            <p class="text-gray-500 text-sm mb-8 relative z-10">Horario corrido. Sin turno previo.</p>
+
+            <div class="space-y-8 relative z-10">
+              <div>
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-2 h-2 bg-[#D2C18D] rounded-full"></span>
+                  <h4 class="text-gray-300 font-medium tracking-wide">LUNES A VIERNES</h4>
+                </div>
+                <p class="text-3xl md:text-4xl font-bold text-white">07:00 <span class="text-[#D2C18D] text-xl">a</span>
+                  22:00</p>
+              </div>
+
+              <div class="mt-2 w-full h-[1px] bg-white/10"></div>
+
+              <div class="mt-2">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-2 h-2 bg-[#D2C18D] rounded-full"></span>
+                  <h4 class="text-gray-300 font-medium tracking-wide">SÁBADOS</h4>
+                </div>
+                <p class="text-3xl md:text-4xl font-bold text-white">09:00 <span class="text-[#D2C18D] text-xl">a</span>
+                  13:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 bg-[#111111] border border-white/10 p-8 md:p-10 relative">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+              <div>
+                <h3 class="text-2xl font-bold text-white">Clases Grupales</h3>
+                <p class="text-gray-500 text-sm">Duración de clase: 1 Hora</p>
+              </div>
+              <a href="https://atleticlujan.misactividades.com/" target="_blank"
+                class="px-4 py-2 border border-[#D2C18D] text-[#D2C18D] text-xs font-bold uppercase tracking-wider hover:bg-[#D2C18D] hover:text-black transition-all">
+                Reservar Lugar
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+              <div>
+                <h4 class="text-[#D2C18D] font-bold border-b border-[#D2C18D]/30 pb-3 mb-6 tracking-wide">LUNES, MIÉRC.
+                  Y VIERNES</h4>
+                <div class="space-y-6">
                   <div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight">AHORA CONTAMOS CON <span class="text-[#D2C18D]">WELLHUB</span></h3>
-                    <p class="text-gray-400 max-w-xl text-lg">Si tenés una suscripción activa, vení a entrenar con nosotros sin costo adicional.</p>
+                    <div class="flex justify-between items-baseline mb-1">
+                      <h5 class="text-white font-semibold text-lg">Funcional</h5>
+                      <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Intensidad
+                        Media</span>
+                    </div>
+                    <p class="text-gray-400 font-mono text-sm">08:00 · 10:00 · 11:00</p>
+                    <p class="text-gray-400 font-mono text-sm">17:00 · 19:00</p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between items-baseline mb-1">
+                      <h5 class="text-white font-semibold text-lg">G.A.P.</h5>
+                      <span
+                        class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Glúteos/Abd/Piernas</span>
+                    </div>
+                    <p class="text-gray-400 font-mono text-sm">09:00</p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between items-baseline mb-1">
+                      <h5 class="text-white font-semibold text-lg">Cross Training</h5>
+                      <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Alta
+                        Intensidad</span>
+                    </div>
+                    <p class="text-gray-400 font-mono text-sm">18:00 · 20:00</p>
                   </div>
                 </div>
-        
-                <div class="flex-shrink-0 relative z-10">
-                  <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white font-semibold tracking-wider hover:bg-[#D2C18D] hover:text-black hover:border-[#D2C18D] transition-all cursor-default">
-                    <span>¡TE ESPERAMOS!</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                  </div>
-                </div>
-        
               </div>
+
+              <div>
+                <h4 class="text-[#D2C18D] font-bold border-b border-[#D2C18D]/30 pb-3 mb-6 tracking-wide">MARTES Y
+                  JUEVES</h4>
+                <div class="space-y-6">
+                  <div>
+                    <div class="flex justify-between items-baseline mb-1">
+                      <h5 class="text-white font-semibold text-lg">Funcional</h5>
+                      <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Intensidad
+                        Media</span>
+                    </div>
+                    <p class="text-gray-400 font-mono text-sm">09:00 · 10:00 · 11:00</p>
+                    <p class="text-gray-400 font-mono text-sm">17:00 · 19:00</p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between items-baseline mb-1">
+                      <h5 class="text-white font-semibold text-lg">G.A.P.</h5>
+                      <span
+                        class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Glúteos/Abd/Piernas</span>
+                    </div>
+                    <p class="text-gray-400 font-mono text-sm">08:00 · 18:00</p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between items-baseline mb-1">
+                      <h5 class="text-white font-semibold text-lg">Cross Training</h5>
+                      <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Alta
+                        Intensidad</span>
+                    </div>
+                    <p class="text-gray-400 font-mono text-sm">20:00</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
+          </div>
 
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <!-- ------------------------------------------------------- //PLANES ----------------------------------------------------------------->
+    <!-- ------------------------------------------------------- //HORARIOS ----------------------------------------------------------------->
 
-        <!-- ------------------------------------------------------- HORARIOS ----------------------------------------------------------------->
+    <!-- ------------------------------------------------------- FOOTER ----------------------------------------------------------------->
 
-        <section id="horarios" class="py-24 bg-[#0A0A0A] relative overflow-hidden border-t border-white/5">
-  
-  <div class="absolute top-0 left-0 w-full h-full max-w-7xl mx-auto pointer-events-none opacity-20 overflow-hidden">
-    <div class="absolute bottom-[10%] left-[-10%] w-96 h-96 bg-[#D2C18D] rounded-full blur-[120px]"></div>
+    <footer class="bg-[#050505] border-t border-white/5">
+      <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h3 class="text-3xl font-bold text-white mb-2">ATLETIC</h3>
+            <p class="text-[#D2C18D] text-sm tracking-widest mb-6">ENTRENAR CON PROPÓSITO</p>
+            <p class="text-gray-500 leading-relaxed">Un gimnasio donde cada socio importa, donde tu compromiso es
+              el nuestro y donde el progreso es real.</p>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-6">Navegación</h4>
+            <div class="grid grid-cols-2 gap-3">
+              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Presentación</button>
+              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Historia</button>
+              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Equipo</button>
+              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Ubicación</button>
+              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Actividades</button>
+              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Shop</button>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-6">Contacto</h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3 text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-map-pin w-5 h-5 flex-shrink-0 mt-0.5">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Av. Pellegrini 951, B6700 Luján, Provincia de Buenos Aires</span>
+              </div>
+              <a href="https://wa.me/5491123947976?text=Hola! Quiero más información sobre Atletic" target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 text-gray-500 hover:text-[#25D366] transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-message-circle w-5 h-5">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                </svg>
+                <span>011 1523-947976</span>
+              </a>
+            </div>
+            <div class="flex gap-4 mt-6">
+              <a href="https://www.instagram.com/atletic.fitt?utm_medium=copy_link" target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-purple-600 to-pink-500 text-white font-medium hover:opacity-90 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-instagram w-5 h-5">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg> Instagram </a>
+              <a href="https://wa.me/5491123947976?text=Hola! Quiero más información sobre Atletic" target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white font-medium hover:opacity-90 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-message-circle w-5 h-5">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                </svg> WhatsApp </a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-gray-600 text-sm">© 2026 Atletic. Todos los derechos reservados.</p>
+          <p class="text-gray-600 text-sm">Diseñado con 💛 para los que entrenan con propósito</p>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    
-    <div class="text-center mb-16">
-      <span class="text-[#D2C18D] text-sm tracking-[0.3em] uppercase mb-4 block">Agenda Semanal</span>
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">NUESTROS <span class="text-[#D2C18D]">HORARIOS</span></h2>
-      <div class="w-16 h-[2px] bg-[#D2C18D] mx-auto mb-8"></div>
-    </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      
-      <div class="bg-[#111111] border border-white/10 p-8 flex flex-col justify-center relative overflow-hidden group">
-        <div class="absolute inset-0 bg-[#D2C18D]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        
-        <h3 class="text-2xl font-bold text-white mb-2 relative z-10">Sala de Musculación</h3>
-        <p class="text-gray-500 text-sm mb-8 relative z-10">Horario corrido. Sin turno previo.</p>
-        
-        <div class="space-y-8 relative z-10">
-          <div>
-            <div class="flex items-center gap-3 mb-2">
-              <span class="w-2 h-2 bg-[#D2C18D] rounded-full"></span>
-              <h4 class="text-gray-300 font-medium tracking-wide">LUNES A VIERNES</h4>
-            </div>
-            <p class="text-3xl md:text-4xl font-bold text-white">07:00 <span class="text-[#D2C18D] text-xl">a</span> 22:00</p>
-          </div>
-          
-          <div class="mt-2 w-full h-[1px] bg-white/10"></div>
-          
-          <div class="mt-2"> 
-            <div class="flex items-center gap-3 mb-2">
-              <span class="w-2 h-2 bg-[#D2C18D] rounded-full"></span>
-              <h4 class="text-gray-300 font-medium tracking-wide">SÁBADOS</h4>
-            </div>
-            <p class="text-3xl md:text-4xl font-bold text-white">09:00 <span class="text-[#D2C18D] text-xl">a</span> 13:00</p>
-          </div>
-        </div>
-      </div>
+  <!-- ------------------------------------------------------- CARRITO ----------------------------------------------------------------->
 
-      <div class="lg:col-span-2 bg-[#111111] border border-white/10 p-8 md:p-10 relative">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <div>
-            <h3 class="text-2xl font-bold text-white">Clases Grupales</h3>
-            <p class="text-gray-500 text-sm">Duración de clase: 1 Hora</p>
-          </div>
-          <a href="https://wa.me/5491123947976?text=Hola! Quiero reservar un lugar para una clase" target="_blank" class="px-4 py-2 border border-[#D2C18D] text-[#D2C18D] text-xs font-bold uppercase tracking-wider hover:bg-[#D2C18D] hover:text-black transition-all">
-            Reservar Lugar
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          
-          <div>
-            <h4 class="text-[#D2C18D] font-bold border-b border-[#D2C18D]/30 pb-3 mb-6 tracking-wide">LUNES, MIÉRC. Y VIERNES</h4>
-            <div class="space-y-6">
-              <div>
-                <div class="flex justify-between items-baseline mb-1">
-                  <h5 class="text-white font-semibold text-lg">Funcional</h5>
-                  <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Intensidad Media</span>
-                </div>
-                <p class="text-gray-400 font-mono text-sm">08:00 · 10:00 · 11:00</p>
-                <p class="text-gray-400 font-mono text-sm">17:00 · 19:00</p>
-              </div>
-
-              <div>
-                <div class="flex justify-between items-baseline mb-1">
-                  <h5 class="text-white font-semibold text-lg">G.A.P.</h5>
-                  <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Glúteos/Abd/Piernas</span>
-                </div>
-                <p class="text-gray-400 font-mono text-sm">09:00</p>
-              </div>
-
-              <div>
-                <div class="flex justify-between items-baseline mb-1">
-                  <h5 class="text-white font-semibold text-lg">Cross Training</h5>
-                  <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Alta Intensidad</span>
-                </div>
-                <p class="text-gray-400 font-mono text-sm">18:00 · 20:00</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-[#D2C18D] font-bold border-b border-[#D2C18D]/30 pb-3 mb-6 tracking-wide">MARTES Y JUEVES</h4>
-            <div class="space-y-6">
-              <div>
-                <div class="flex justify-between items-baseline mb-1">
-                  <h5 class="text-white font-semibold text-lg">Funcional</h5>
-                  <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Intensidad Media</span>
-                </div>
-                <p class="text-gray-400 font-mono text-sm">09:00 · 10:00 · 11:00</p>
-                <p class="text-gray-400 font-mono text-sm">17:00 · 19:00</p>
-              </div>
-
-              <div>
-                <div class="flex justify-between items-baseline mb-1">
-                  <h5 class="text-white font-semibold text-lg">G.A.P.</h5>
-                  <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Glúteos/Abd/Piernas</span>
-                </div>
-                <p class="text-gray-400 font-mono text-sm">08:00 · 18:00</p>
-              </div>
-
-              <div>
-                <div class="flex justify-between items-baseline mb-1">
-                  <h5 class="text-white font-semibold text-lg">Cross Training</h5>
-                  <span class="text-xs text-gray-500 border border-white/10 px-2 py-0.5 rounded">Alta Intensidad</span>
-                </div>
-                <p class="text-gray-400 font-mono text-sm">20:00</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-         <!-- ------------------------------------------------------- //HORARIOS ----------------------------------------------------------------->
-
-        <!-- ------------------------------------------------------- FOOTER ----------------------------------------------------------------->
-
-        <footer class="bg-[#050505] border-t border-white/5">
-          <div class="max-w-6xl mx-auto px-6 py-16">
-            <div class="grid md:grid-cols-3 gap-12 mb-12">
-              <div>
-                <h3 class="text-3xl font-bold text-white mb-2">ATLETIC</h3>
-                <p class="text-[#D2C18D] text-sm tracking-widest mb-6">ENTRENAR CON PROPÓSITO</p>
-                <p class="text-gray-500 leading-relaxed">Un gimnasio donde cada socio importa, donde tu compromiso es
-                  el nuestro y donde el progreso es real.</p>
-              </div>
-              <div>
-                <h4 class="text-white font-semibold mb-6">Navegación</h4>
-                <div class="grid grid-cols-2 gap-3">
-                  <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Presentación</button>
-                  <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Historia</button>
-                  <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Equipo</button>
-                  <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Ubicación</button>
-                  <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Actividades</button>
-                  <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Shop</button>
-                </div>
-              </div>
-              <div>
-                <h4 class="text-white font-semibold mb-6">Contacto</h4>
-                <div class="space-y-4">
-                  <div class="flex items-start gap-3 text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-map-pin w-5 h-5 flex-shrink-0 mt-0.5">
-                      <path
-                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                      </path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <span>Av. Pellegrini 951, B6700 Luján, Provincia de Buenos Aires</span>
-                  </div>
-                  <a href="https://wa.me/5491123947976?text=Hola! Quiero más información sobre Atletic" target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center gap-3 text-gray-500 hover:text-[#25D366] transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-message-circle w-5 h-5">
-                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
-                    </svg>
-                    <span>011 1523-947976</span>
-                  </a>
-                </div>
-                <div class="flex gap-4 mt-6">
-                  <a href="https://www.instagram.com/atletic.fitt?utm_medium=copy_link" target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-purple-600 to-pink-500 text-white font-medium hover:opacity-90 transition-all duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-instagram w-5 h-5">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                    </svg> Instagram </a>
-                  <a href="https://wa.me/5491123947976?text=Hola! Quiero más información sobre Atletic" target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white font-medium hover:opacity-90 transition-all duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-message-circle w-5 h-5">
-                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
-                    </svg> WhatsApp </a>
-                </div>
-              </div>
-            </div>
-            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-              <p class="text-gray-600 text-sm">© 2026 Atletic. Todos los derechos reservados.</p>
-              <p class="text-gray-600 text-sm">Diseñado con 💛 para los que entrenan con propósito</p>
-            </div>
-          </div>
-        </footer>
-    </div>
-    <div id="cart-container"
-      class="hidden fixed top-24 right-4 z-[60] w-80 bg-[#111111] border border-white/10 p-6 shadow-2xl">
-      <div class="flex items-center justify-between mb-6">
-        <div class="flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" class="text-[#D2C18D]">
-            <circle cx="8" cy="21" r="1" />
-            <circle cx="19" cy="21" r="1" />
-            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-          </svg>
-          <h3 class="text-white font-semibold text-sm">Tu pedido (<span id="cart-count">0</span>)</h3>
-        </div>
-        <button id="clear-cart" class="text-gray-500 hover:text-red-500 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <path d="M3 6h18" />
-            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
-            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
-          </svg>
-        </button>
-      </div>
-
-      <div id="cart-items" class="space-y-4 max-h-60 overflow-y-auto mb-6 pr-2">
-      </div>
-
-      <button id="whatsapp-order"
-        class="w-full py-4 bg-[#25D366] text-white font-bold rounded-full flex items-center justify-center gap-3 hover:bg-[#1ebd5c] transition-all shadow-lg active:scale-95">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-message-circle">
-          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+  <div id="cart-container"
+    class="hidden fixed top-24 right-4 z-[60] w-80 bg-[#111111] border border-white/10 p-6 shadow-2xl">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" class="text-[#D2C18D]">
+          <circle cx="8" cy="21" r="1" />
+          <circle cx="19" cy="21" r="1" />
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
         </svg>
-        Enviar pedido por WhatsApp
+        <h3 class="text-white font-semibold text-sm">Tu pedido (<span id="cart-count">0</span>)</h3>
+      </div>
+      <button id="clear-cart" class="text-gray-500 hover:text-red-500 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18" />
+          <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+          <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+        </svg>
       </button>
     </div>
-    </main>
+
+    <div id="cart-items" class="space-y-4 max-h-60 overflow-y-auto mb-6 pr-2">
+    </div>
+
+    <button id="whatsapp-order"
+      class="w-full py-4 px-8 bg-[#25D366] text-white font-bold rounded-full flex items-center justify-center gap-4 hover:bg-[#1ebd5c] transition-all shadow-lg active:scale-95">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-message-circle">
+        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+      </svg>
+      <span class="tracking-wide">Enviar pedido por WhatsApp</span>
+    </button>
+  </div>
+  </main>
   </div>
   <div
     class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
@@ -1854,12 +1860,21 @@
     </div>
   </div>
   </div>
+
+  <!-- ------------------------------------------------------- //CARRITO ----------------------------------------------------------------->
+
   <script src="js/index.js"></script>
+
+  <!-- ------------------------------------------------------- BOTON FLOTANTE WAPP ----------------------------------------------------------------->
 
   <a href="https://wa.me/5491123947976" class="whatsapp-float" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
+
+</div>
 </body>
+
+<!-- ------------------------------------------------------- //BOTON FLOTANTE WAPP ----------------------------------------------------------------->
 
 <!-- ------------------------------------------------------- //FOOTER ----------------------------------------------------------------->
 

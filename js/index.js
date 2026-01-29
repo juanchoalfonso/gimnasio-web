@@ -70,16 +70,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[style*="opacity: 0"]').forEach((el) => observer.observe(el));
 
 
-    // --- 3. BOTÓN DE MENÚ (MOBILE) ---
-    const menuBtn = document.querySelector('button.md\\:hidden');
 
-    if (menuBtn) {
-        menuBtn.addEventListener('click', () => {
-            console.log("Menú clickeado - Aquí iría la lógica para abrir el menú");
-            // Por ahora solo probamos que el clic funcione
-            alert("¡Botón de menú funcionando!");
-        });
+  // --- LÓGICA DEL MENÚ MÓVIL INTELIGENTE ---
+  const menuBtn = document.querySelector('button.md\\:hidden'); // El botón de 3 rayitas
+  const mobileMenu = document.getElementById('mobile-menu'); // El cajón del menú
+  const menuLinks = document.querySelectorAll('#mobile-menu a'); // Todos los links del menú
+
+  // 1. ABRIR / CERRAR con el botón
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Evita que el click cierre el menú inmediatamente
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // 2. CERRAR al hacer clic en un enlace (Redirige y limpia)
+  if (mobileMenu) {
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden'); // Se esconde al instante
+      });
+    });
+  }
+
+  // 3. CERRAR al hacer Scroll (Si bajo la pantalla, chau menú)
+  window.addEventListener('scroll', () => {
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
     }
+  });
+
+  // 4. (Opcional) CERRAR si toco afuera del menú
+  document.addEventListener('click', (e) => {
+    if (mobileMenu && !mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+
 
     // --- 4. LÓGICA DE LAS FLECHITAS (SCROLL DOWN) ---
     // Buscamos todos los elementos que tengan el ícono de la flecha hacia abajo
@@ -307,3 +334,83 @@ document.querySelectorAll('button[data-activity]').forEach(btn => {
 });
    
 });
+
+
+
+  // --- BASE DE DATOS DE ACTIVIDADES ---
+  // IMPORTANTE: Revisá que los nombres de las imágenes (assets/...) sean los correctos
+  const activitiesData = {
+    musculacion: {
+      title: "Musculación",
+      desc: "Entrenamiento planificado, con acompañamiento profesional y máquinas propias. Ideal para ganar fuerza, mejorar tu físico y entrenar con criterio.",
+      img: "assets/overview4.jpeg",
+      tags: ["Máquinas propias", "Fuerza y Control", "Seguimiento"]
+    },
+    funcional: {
+      title: "Funcional",
+      desc: "Trabajo integral del cuerpo, en grupos guiados, dinámicos y adaptables a todos los niveles. Mejorá tu movilidad y resistencia.",
+      img: "assets/plancha.jpeg",
+      tags: ["Grupos reducidos", "Todos los niveles", "Dinámico"]
+    },
+    cross: {
+      title: "Cross Training",
+      desc: "Alta intensidad para romper tus límites. Combinamos fuerza, gimnasia y resistencia en entrenamientos desafiantes cada día.",
+      img: "assets/sentadilla.jpeg",
+      tags: ["Alta Intensidad", "Comunidad", "Desafío"]
+    },
+    gap: {
+      title: "G.A.P.",
+      desc: "Clase focalizada en Glúteos, Abdomen y Piernas. Tonificá y fortalecé el tren inferior con ejercicios específicos.",
+      img: "assets/step.jpeg",
+      tags: ["Tonificación", "Focalizado", "Intenso"]
+    },
+    calistenia: {
+      title: "Calistenia",
+      desc: "Dominá tu propio peso corporal. Ganá fuerza relativa, control y habilidades gimnásticas progresivas.",
+      img: "assets/calistenia.jpg",
+      tags: ["Peso Corporal", "Control", "Habilidades"]
+    }
+  };
+
+  // --- FUNCIÓN QUE SE EJECUTA AL HACER CLICK ---
+  function changeActivity(key) {
+    const data = activitiesData[key];
+    if (!data) return;
+
+    // 1. Actualizar Textos e Imagen
+    document.getElementById('activity-title').innerText = data.title;
+    document.getElementById('activity-desc').innerText = data.desc;
+    document.getElementById('activity-img').src = data.img;
+
+    // 2. Actualizar Tags
+    const tagsContainer = document.getElementById('activity-tags');
+    tagsContainer.innerHTML = data.tags.map(tag => 
+      `<span class="px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm border border-white/20 rounded-full">${tag}</span>`
+    ).join('');
+
+    // 3. Actualizar Colores de los Botones (Activo/Inactivo)
+    document.querySelectorAll('.activity-btn').forEach(btn => {
+      const isSelected = btn.getAttribute('data-id') === key;
+      const icon = btn.querySelector('svg.lucide:not(.lucide-chevron-right)'); // El icono de la izquierda
+      
+      if (isSelected) {
+        // Estilo Activo: Dorado y letras negras
+        btn.classList.remove('bg-[#111111]', 'text-white', 'hover:bg-[#1a1a1a]');
+        btn.classList.add('bg-[#D2C18D]', 'text-black');
+        if(icon) icon.classList.remove('text-[#D2C18D]'); // Icono negro
+      } else {
+        // Estilo Inactivo: Negro y letras blancas
+        btn.classList.remove('bg-[#D2C18D]', 'text-black');
+        btn.classList.add('bg-[#111111]', 'text-white', 'hover:bg-[#1a1a1a]');
+        if(icon) icon.classList.add('text-[#D2C18D]'); // Icono dorado
+      }
+    });
+
+    // 4. (MAGIA PARA MÓVIL) Si es pantalla chica, scrollear hasta la imagen
+    if (window.innerWidth < 1024) { // 1024px es el corte de 'lg' en Tailwind
+        const displayArea = document.getElementById('activity-display-area');
+        if(displayArea) {
+            displayArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+  }
