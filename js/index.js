@@ -223,9 +223,122 @@ document.getElementById('clear-cart')?.addEventListener('click', () => {
     document.querySelectorAll('span.text-white.w-6').forEach(s => s.innerText = "0");
 });
 
+
+
+    // --- BACK TO TOP ---
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) backToTop?.classList.add('visible');
+        else backToTop?.classList.remove('visible');
+    }, { passive: true });
+    backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+
+    // --- FAQ ACCORDION ---
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const answer = item.querySelector('.faq-answer');
+            const isOpen = item.classList.contains('open');
+
+            document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                openItem.classList.remove('open');
+                openItem.querySelector('.faq-answer').style.maxHeight = '0';
+            });
+
+            if (!isOpen) {
+                item.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+
+    // --- LIGHTBOX ---
+    const lbImages = [];
+    let lbIndex = 0;
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCounter = document.getElementById('lightbox-counter');
+
+    function lbOpen(index) {
+        lbIndex = index;
+        lbImg.src = lbImages[index].src;
+        lbImg.alt = lbImages[index].alt;
+        lbCounter.textContent = lbImages.length > 1 ? `${index + 1} / ${lbImages.length}` : '';
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function lbClose() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function lbNav(dir) {
+        lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+        lbImg.style.opacity = '0';
+        setTimeout(() => {
+            lbImg.src = lbImages[lbIndex].src;
+            lbImg.alt = lbImages[lbIndex].alt;
+            lbCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+            lbImg.style.opacity = '1';
+        }, 150);
+    }
+
+    document.querySelectorAll('[data-lightbox]').forEach((img, i) => {
+        lbImages.push({ src: img.src, alt: img.alt });
+        img.addEventListener('click', () => lbOpen(i));
+    });
+
+    document.getElementById('lightbox-close')?.addEventListener('click', lbClose);
+    lb?.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+    document.getElementById('lightbox-prev')?.addEventListener('click', () => lbNav(-1));
+    document.getElementById('lightbox-next')?.addEventListener('click', () => lbNav(1));
+
+    document.addEventListener('keydown', e => {
+        if (!lb?.classList.contains('active')) return;
+        if (e.key === 'Escape') lbClose();
+        if (e.key === 'ArrowLeft') lbNav(-1);
+        if (e.key === 'ArrowRight') lbNav(1);
+    });
+
+    let lbTouchX = 0;
+    lb?.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+    lb?.addEventListener('touchend', e => {
+        const diff = lbTouchX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) lbNav(diff > 0 ? 1 : -1);
+    });
+
+
+    // --- NAVBAR SECCIÓN ACTIVA ---
+    const normalize = str => str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
+    const navBtns = document.querySelectorAll('nav .hidden.md\\:flex button');
+
+    const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const id = normalize(entry.target.id);
+            navBtns.forEach(btn => {
+                btn.classList.toggle('nav-active', normalize(btn.textContent) === id);
+            });
+        });
+    }, { rootMargin: '-30% 0px -65% 0px', threshold: 0 });
+
+    document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
+
 });
 
 
+// --- PRELOADER ---
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.remove(), 700);
+    }
+});
 
 
   // --- BASE DE DATOS DE ACTIVIDADES ---
