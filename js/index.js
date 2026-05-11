@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll);
 
     // --- 2. ANIMACIÓN DE APARICIÓN PREMIUM (CON DELAY) ---
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const observerOptions = {
         threshold: 0.1
     };
@@ -26,14 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const el = entry.target;
-                // Busca el delay en el HTML. Si no hay, usa 0 segundos.
-                const delay = el.getAttribute('data-delay') || '0s';
-
-                // Aplicamos la animación usando el delay del HTML
-                el.style.transition = `all 1.2s ease-out ${delay}`;
-                el.style.opacity = "1";
-                el.style.transform = "translateY(0)";
-
+                if (prefersReducedMotion) {
+                    el.style.opacity = "1";
+                    el.style.transform = "none";
+                } else {
+                    const delay = el.getAttribute('data-delay') || '0s';
+                    el.style.transition = `all 1.2s ease-out ${delay}`;
+                    el.style.opacity = "1";
+                    el.style.transform = "translateY(0)";
+                }
                 observer.unobserve(el);
             }
         });
@@ -119,8 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Para los demás botones, busca por ID
-            const targetSection = document.getElementById(sectionText);
+            // Para los demás botones, busca por ID (normaliza acentos)
+            const normalizedText = sectionText.normalize('NFD').replace(/[̀-ͯ]/g, '');
+            const targetSection = document.getElementById(normalizedText) || document.getElementById(sectionText);
 
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
