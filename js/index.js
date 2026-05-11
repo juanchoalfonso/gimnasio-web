@@ -371,7 +371,7 @@ window.addEventListener('load', () => {
     calistenia: {
       title: "Calistenia",
       desc: "Dominá tu propio peso corporal. Ganá fuerza relativa, control y habilidades gimnásticas progresivas.",
-      img: "assets/old_calistenia.jpg",
+      img: "assets/calistenia.jpeg",
       tags: ["Peso Corporal", "Control", "Habilidades"]
     }
   };
