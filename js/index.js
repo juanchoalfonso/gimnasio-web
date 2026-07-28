@@ -48,39 +48,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // --- LÓGICA DEL MENÚ MÓVIL INTELIGENTE ---
-  const menuBtn = document.querySelector('button.md\\:hidden'); // El botón de 3 rayitas
+  const menuBtn = document.querySelector('button.lg\\:hidden'); // El botón de 3 rayitas
   const mobileMenu = document.getElementById('mobile-menu'); // El cajón del menú
   const menuLinks = document.querySelectorAll('#mobile-menu a'); // Todos los links del menú
+
+  // Cierra el menú y deja el botón anunciando el estado correcto para lectores de pantalla
+  function closeMenu() {
+    if (!mobileMenu || mobileMenu.classList.contains('hidden')) return;
+    mobileMenu.classList.add('hidden');
+    menuBtn?.setAttribute('aria-expanded', 'false');
+  }
 
   // 1. ABRIR / CERRAR con el botón
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', (e) => {
       e.stopPropagation(); // Evita que el click cierre el menú inmediatamente
-      mobileMenu.classList.toggle('hidden');
+      const abierto = mobileMenu.classList.toggle('hidden') === false;
+      menuBtn.setAttribute('aria-expanded', String(abierto));
     });
   }
 
   // 2. CERRAR al hacer clic en un enlace (Redirige y limpia)
   if (mobileMenu) {
     menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden'); // Se esconde al instante
-      });
+      link.addEventListener('click', closeMenu); // Se esconde al instante
     });
   }
 
   // 3. CERRAR al hacer Scroll (Si bajo la pantalla, chau menú)
-  window.addEventListener('scroll', () => {
-    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.add('hidden');
-    }
-  });
+  window.addEventListener('scroll', closeMenu, { passive: true });
 
   // 4. (Opcional) CERRAR si toco afuera del menú
   document.addEventListener('click', (e) => {
-    if (mobileMenu && !mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
-      mobileMenu.classList.add('hidden');
+    if (mobileMenu && !mobileMenu.contains(e.target) && e.target !== menuBtn && !menuBtn?.contains(e.target)) {
+      closeMenu();
     }
+  });
+
+  // 5. CERRAR con la tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
   });
 
 
@@ -318,7 +325,7 @@ document.getElementById('clear-cart')?.addEventListener('click', () => {
 
     // --- NAVBAR SECCIÓN ACTIVA ---
     const normalize = str => str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
-    const navBtns = document.querySelectorAll('nav .hidden.md\\:flex button');
+    const navBtns = document.querySelectorAll('nav .hidden.lg\\:flex button');
 
     const sectionObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {

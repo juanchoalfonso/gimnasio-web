@@ -1,22 +1,27 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="utf-8">
   <link href="assets/logo_atletic.jpg" rel="icon" type="image/jpeg">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="#0A0A0A" name="theme-color">
   <link href="assets/manifest.json" rel="manifest">
-  <title>ATLETIC</title>
+  <title>Atletic | Gimnasio en Luján — Musculación, Funcional, Cross y Calistenia</title>
   <link crossorigin="" href="css/index.css" rel="stylesheet">
   <meta content="ATLETIC" property="og:title">
   <meta content="Atletic es un gimnasio premium que va más allá del ejercicio físico, ofreciendo un entorno profesional y centrado en las personas, enfocado en el progreso constante. Proporcionamos orientación personalizada, una variedad de actividades que van desde el levantamiento de pesas hasta el entrenamiento funcional y la calistenia, y una tienda en el propio gimnasio para todas tus necesidades de fitness." property="og:description">
-  <meta content="assets/logo_atletic.jpg?width=1200&amp;height=630&amp;resize=contain" property="og:image">
+  <meta content="https://www.atleticfitt.com.ar/assets/logo_grande.jpg" property="og:image">
+  <meta content="407" property="og:image:width">
+  <meta content="407" property="og:image:height">
+  <meta content="Logo de Atletic" property="og:image:alt">
   <meta content="https://www.atleticfitt.com.ar/" property="og:url">
   <meta content="website" property="og:type">
   <meta content="ATLETIC" property="og:site_name">
-  <meta content="summary_large_image" name="twitter:card">
+  <meta content="summary" name="twitter:card">
   <meta content="ATLETIC" name="twitter:title">
   <meta content="Atletic es un gimnasio premium que va más allá del ejercicio físico, ofreciendo un entorno profesional y centrado en las personas, enfocado en el progreso constante. Proporcionamos orientación personalizada, una variedad de actividades que van desde el levantamiento de pesas hasta el entrenamiento funcional y la calistenia, y una tienda en el propio gimnasio para todas tus necesidades de fitness." name="twitter:description">
-  <meta content="assets/logo_atletic.jpg?width=1200&amp;height=630&amp;resize=contain" name="twitter:image">
+  <meta content="https://www.atleticfitt.com.ar/assets/logo_grande.jpg" name="twitter:image">
   <meta content="https://www.atleticfitt.com.ar/" name="twitter:url">
   <meta content="Atletic es un gimnasio premium que va más allá del ejercicio físico, ofreciendo un entorno profesional y centrado en las personas, enfocado en el progreso constante. Proporcionamos orientación personalizada, una variedad de actividades que van desde el levantamiento de pesas hasta el entrenamiento funcional y la calistenia, y una tienda en el propio gimnasio para todas tus necesidades de fitness." name="description">
   <meta content="yes" name="mobile-web-app-capable">
@@ -32,6 +37,9 @@
     gtag('config', 'G-FEFR1K35S6');
   </script>
   <style>
+    /* La nav fija mide ~88px: evita que tape el arranque de cada sección al saltar */
+    html { scroll-padding-top: 100px; }
+
     /* Preloader */
     #preloader {
       position: fixed; inset: 0; background: #0A0A0A; z-index: 9999;
@@ -173,27 +181,28 @@
       <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-6">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <button class="text-2xl font-bold text-white tracking-tight">ATLETIC</button>
-          <div class="hidden md:flex items-center gap-6">
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Inicio</button>
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Historia</button>
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Equipo</button>
+          <div class="hidden lg:flex items-center gap-6">
+            <button class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Inicio</button>
+            <button class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Historia</button>
+            <button class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Equipo</button>
             <button
-              class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Ubicación</button>
+              class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Ubicación</button>
             <button
-              class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Actividades</button>
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Planes</button>
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Horarios</button>
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">Shop</button>
-            <button class="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm tracking-wide">FAQ</button>
+              class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Actividades</button>
+            <button class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Planes</button>
+            <button class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Horarios</button>
+            <button class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">Shop</button>
+            <button class="text-gray-300 hover:text-[#D2C18D] transition-colors text-sm tracking-wide">FAQ</button>
             <a href="https://atleticlujan.misactividades.com/" target="_blank"
               rel="noopener noreferrer"
-              class="px-5 py-2.5 border border-[#D4AF37] text-[#D4AF37] font-semibold text-sm hover:bg-[#D4AF37] hover:text-black transition-all">RESERVAR
+              class="px-5 py-2.5 border border-[#D2C18D] text-[#D2C18D] font-semibold text-sm hover:bg-[#D2C18D] hover:text-black transition-all">RESERVAR
               CLASE</a>
             <a href="https://wa.me/5491123947976?text=Hola! Quiero más información sobre Atletic" target="_blank"
               rel="noopener noreferrer"
-              class="px-5 py-2.5 bg-[#D4AF37] text-black font-semibold text-sm hover:bg-[#E5C04B] transition-colors">CONTACTO</a>
+              class="px-5 py-2.5 bg-[#D2C18D] text-black font-semibold text-sm hover:bg-[#E5C04B] transition-colors">CONTACTO</a>
           </div>
-          <button class="md:hidden text-white p-2" aria-label="Abrir menú de navegación">
+          <button class="lg:hidden text-white p-2" aria-label="Abrir menú de navegación" aria-expanded="false"
+            aria-controls="mobile-menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="lucide lucide-menu w-6 h-6">
@@ -203,7 +212,7 @@
             </svg>
           </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#0A0A0A] border-t border-b border-white/10 shadow-2xl z-50">
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-[#0A0A0A] border-t border-b border-white/10 shadow-2xl z-50">
           <div class="flex flex-col p-6 space-y-4">
               <a href="#" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Inicio</a>
               <a href="#historia" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Historia</a>
@@ -214,9 +223,14 @@
               <a href="#horarios" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">Horarios</a>
               <a href="#shop" class="menu-link text-[#D2C18D] font-bold text-lg border-b border-white/5 pb-2">Shop</a>
               <a href="#faq" class="menu-link text-gray-300 hover:text-[#D2C18D] text-lg font-medium border-b border-white/5 pb-2">FAQ</a>
-              <a href="https://atleticlujan.misactividades.com/" target="_blank"
-               class="border border-[#D4AF37] text-[#D4AF37] text-[10px] font-bold px-3 py-2 uppercase tracking-wider hover:bg-[#D4AF37] hover:text-black transition-all">
+              <a href="https://atleticlujan.misactividades.com/" target="_blank" rel="noopener noreferrer"
+               class="block text-center border border-[#D2C18D] text-[#D2C18D] text-sm font-bold px-3 py-3 uppercase tracking-wider hover:bg-[#D2C18D] hover:text-black transition-all">
               RESERVAR CLASE
+            </a>
+              <a href="https://wa.me/5491123947976?text=Hola! Quiero más información sobre Atletic" target="_blank"
+               rel="noopener noreferrer"
+               class="block text-center bg-[#D2C18D] text-black text-sm font-bold px-3 py-3 uppercase tracking-wider hover:bg-[#E5C04B] transition-all">
+              CONTACTO
             </a>
             </div>
         </div>
@@ -796,7 +810,7 @@
                       </div>
           
                       <div class="flex items-center gap-2 mt-3 bg-white/5 px-3 py-1 rounded-full border border-white/5">
-                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" class="w-4 h-4">
+                        <svg viewBox="0 0 48 48" class="w-4 h-4" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
                         <span class="text-xs text-gray-400 font-medium">Google Maps</span>
                       </div>
                     </div>
@@ -831,7 +845,7 @@
                           <svg viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
                       </div>
-                      <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="w-4 h-4 ml-auto opacity-50">
+                      <svg viewBox="0 0 48 48" class="w-4 h-4 ml-auto opacity-50" aria-label="Reseña de Google" role="img"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">"El mejor gimnasio de Luján. Las máquinas son nuevas, el ambiente es excelente y los profes siempre están atentos. Muy recomendado."</p>
                   </div>
@@ -849,7 +863,7 @@
                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
                       </div>
-                      <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="w-4 h-4 ml-auto opacity-50">
+                      <svg viewBox="0 0 48 48" class="w-4 h-4 ml-auto opacity-50" aria-label="Reseña de Google" role="img"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">"Empecé hace 3 meses y los cambios son increíbles. Las clases de Funcional son súper dinámicas. ¡Me encanta!"</p>
                   </div>
@@ -867,7 +881,7 @@
                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
                       </div>
-                      <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="w-4 h-4 ml-auto opacity-50">
+                      <svg viewBox="0 0 48 48" class="w-4 h-4 ml-auto opacity-50" aria-label="Reseña de Google" role="img"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">"Excelente atención y limpieza. Se nota que cuidan los detalles. Ideal para entrenar tranquilo y enfocado."</p>
                   </div>
@@ -2117,12 +2131,15 @@
           <div>
             <h4 class="text-white font-semibold mb-6">Navegación</h4>
             <div class="grid grid-cols-2 gap-3">
-              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Presentación</button>
-              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Historia</button>
-              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Equipo</button>
-              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Ubicación</button>
-              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Actividades</button>
-              <button class="text-gray-500 hover:text-[#D2C18D] transition-colors text-left">Shop</button>
+              <a href="#presentacion" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Presentación</a>
+              <a href="#historia" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Historia</a>
+              <a href="#equipo" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Equipo</a>
+              <a href="#ubicacion" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Ubicación</a>
+              <a href="#actividades" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Actividades</a>
+              <a href="#planes" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Planes</a>
+              <a href="#horarios" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Horarios</a>
+              <a href="#shop" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">Shop</a>
+              <a href="#faq" class="text-gray-400 hover:text-[#D2C18D] transition-colors text-left">FAQ</a>
             </div>
           </div>
           <div>
@@ -2220,12 +2237,6 @@
   </div>
   </main>
   </div>
-  <div
-    class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
-    <div
-      class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
-    </div>
-  </div>
   </div>
 
   <!-- ------------------------------------------------------- //CARRITO ----------------------------------------------------------------->
@@ -2235,7 +2246,7 @@
     <button id="lightbox-close">✕</button>
     <button id="lightbox-prev">&#8249;</button>
     <button id="lightbox-next">&#8250;</button>
-    <img id="lightbox-img" src="" alt="">
+    <img id="lightbox-img" alt="">
     <span id="lightbox-counter"></span>
   </div>
 
