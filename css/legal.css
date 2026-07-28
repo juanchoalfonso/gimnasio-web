@@ -1,0 +1,257 @@
+/* Estilos de las páginas legales (privacidad, términos, eliminación de datos).
+   Se cargan DESPUÉS de index.css. Usan CSS plano a propósito: el Tailwind del
+   sitio está precompilado, así que cualquier clase nueva no existiría.
+   También se carga en la home, por las reglas de fondo y los links del pie. */
+
+/* Las clases bg-black / font-sans / antialiased del <body> no existen en el
+   Tailwind compilado, así que el fondo quedaba blanco y se veía al hacer
+   overscroll en mobile. */
+html {
+	background-color: #0A0A0A;
+}
+
+body {
+	background-color: #0A0A0A;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.legal-main {
+	padding-top: 8rem;
+	padding-bottom: 5rem;
+}
+
+.legal-wrap {
+	max-width: 48rem;
+	margin: 0 auto;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+/* --- Encabezado de la página --- */
+.legal-eyebrow {
+	color: #D2C18D;
+	font-size: .75rem;
+	letter-spacing: .3em;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.legal-title {
+	font-size: clamp(1.9rem, 6vw, 3rem);
+	font-weight: 700;
+	color: #fff;
+	line-height: 1.15;
+	margin-bottom: 1.5rem;
+}
+
+.legal-rule {
+	width: 4rem;
+	height: 2px;
+	background: #D2C18D;
+	margin-bottom: 2rem;
+}
+
+.legal-updated {
+	color: #9ca3af;
+	font-size: .875rem;
+	margin-bottom: 3rem;
+}
+
+/* --- Cuerpo --- */
+.legal-body h2 {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin: 3rem 0 1rem;
+	padding-top: .5rem;
+	scroll-margin-top: 6rem;
+}
+
+.legal-body h3 {
+	color: #D2C18D;
+	font-size: 1.05rem;
+	font-weight: 600;
+	margin: 2rem 0 .75rem;
+}
+
+.legal-body p {
+	color: #c9ccd2;
+	line-height: 1.8;
+	margin-bottom: 1.15rem;
+}
+
+.legal-body ul,
+.legal-body ol {
+	color: #c9ccd2;
+	line-height: 1.8;
+	margin: 0 0 1.5rem 1.25rem;
+	padding-left: .5rem;
+}
+
+.legal-body li {
+	margin-bottom: .6rem;
+}
+
+.legal-body ul li::marker {
+	color: #D2C18D;
+}
+
+.legal-body ol li::marker {
+	color: #D2C18D;
+	font-weight: 700;
+}
+
+.legal-body strong {
+	color: #fff;
+	font-weight: 600;
+}
+
+.legal-body a {
+	color: #D2C18D;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.legal-body a:hover {
+	color: #E5C04B;
+}
+
+/* --- Índice de contenidos --- */
+.legal-toc {
+	background: #111;
+	border: 1px solid rgba(255, 255, 255, .08);
+	padding: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.legal-toc p {
+	color: #fff;
+	font-weight: 600;
+	margin-bottom: .75rem;
+}
+
+.legal-toc ol {
+	margin: 0 0 0 1.1rem;
+	color: #9ca3af;
+	line-height: 1.7;
+}
+
+.legal-toc li {
+	margin-bottom: .3rem;
+}
+
+/* --- Recuadro destacado --- */
+.legal-callout {
+	background: #111;
+	border-left: 4px solid #D2C18D;
+	padding: 1.5rem;
+	margin: 2rem 0;
+}
+
+.legal-callout p:last-child {
+	margin-bottom: 0;
+}
+
+/* --- Pasos numerados de la página de eliminación --- */
+.legal-step {
+	background: #111;
+	border: 1px solid rgba(255, 255, 255, .08);
+	padding: 1.5rem;
+	margin-bottom: 1.25rem;
+}
+
+.legal-step-num {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	background: #D2C18D;
+	color: #000;
+	font-weight: 700;
+	margin-bottom: .9rem;
+}
+
+.legal-step h3 {
+	margin-top: 0;
+}
+
+.legal-step p:last-child,
+.legal-step ul:last-child {
+	margin-bottom: 0;
+}
+
+/* --- Botón de contacto --- */
+.legal-cta {
+	display: inline-flex;
+	align-items: center;
+	gap: .75rem;
+	padding: .9rem 2rem;
+	background: #25D366;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	transition: background .2s;
+}
+
+.legal-cta:hover {
+	background: #1ebd5c;
+	color: #fff;
+}
+
+/* --- Placeholder para que el dueño complete --- */
+.ph {
+	color: #E5C04B;
+	background: rgba(229, 192, 75, .1);
+	border: 1px dashed rgba(229, 192, 75, .55);
+	padding: .1em .45em;
+	border-radius: 3px;
+	font-weight: 600;
+}
+
+/* --- Fila de links legales del pie (se usa también en la home) --- */
+.legal-footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767px) {
+	.legal-footer-links {
+		justify-content: center;
+	}
+}
+
+/* --- Tabla de datos --- */
+.legal-table-wrap {
+	overflow-x: auto;
+	margin-bottom: 1.5rem;
+}
+
+.legal-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 30rem;
+}
+
+.legal-table th,
+.legal-table td {
+	text-align: left;
+	padding: .8rem 1rem;
+	border-bottom: 1px solid rgba(255, 255, 255, .08);
+	color: #c9ccd2;
+	line-height: 1.6;
+	vertical-align: top;
+}
+
+.legal-table th {
+	color: #fff;
+	font-weight: 600;
+	font-size: .875rem;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	background: #111;
+}
